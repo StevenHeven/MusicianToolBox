@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="fr">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Site MUSICIAN TOOL BOX : site d'entraide entre musiciens amateurs et professionnels">
+        <meta name="author" content="Steven HERMITTE">
+        <title>MTB : Musician Tool Box</title>
+        {% include ":parts:stylesheets.html.twig" %}
+        {% block stylesheets %}
+        {% endblock %}
+    </head>
+    <body>
+        {% include ":parts:top-bar.html.twig" %}
+        {% block topbar %}
+        {% endblock %}
+
+        {% include ":parts:nav.html.twig" %}
+        {% block header %}
+        {% endblock %}
+
+        <div class="container">
+        {% block content %}
+        {% endblock %}
+        </div>
+
+        {% include ":parts:footer.html.twig" %}
+        {% block footer %}
+        {% endblock %}
+
+        {% include ":parts:javascripts.html.twig" %}
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>

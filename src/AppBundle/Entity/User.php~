@@ -1,0 +1,62 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="User")
+ */
+class User extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @Assert\Email(checkMX=true, message="Utilisez une adresse valide")
+     */
+    protected $email;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Adress", cascade={"persist"})
+     */
+    private $adress;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\MusicianCategory", cascade={"persist"}, fetch="EAGER")
+     */
+    private $musician;
+
+
+    /**
+     * Set pseudo
+     *
+     * @param string $pseudo
+     *
+     * @return User
+     */
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    /**
+     * Get pseudo
+     *
+     * @return string
+     */
+    public function getPseudo()
+    {
+        return $this->pseudo;
+    }
+
+}

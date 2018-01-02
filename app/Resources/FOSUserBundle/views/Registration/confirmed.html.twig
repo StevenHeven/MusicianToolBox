@@ -1,0 +1,16 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    <meta http-equiv="refresh" content="5; url=localhost:8000" />
+{% endblock %}
+
+{% block content %}
+    <div class="register_confirmed_container">
+        <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+        {% if targetUrl %}
+            <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+        {% endif %}
+    </div>
+{% endblock %}
+

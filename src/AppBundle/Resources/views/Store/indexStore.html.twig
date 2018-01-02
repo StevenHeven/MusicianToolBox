@@ -1,0 +1,51 @@
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+<div class="storeContainer">
+    <div class="row">
+        <div class="col-lg-12">
+            <p class="germania text-uppercase text-center titleStore">Tous les Magasins</p>
+            <a href="{{ path('addStore') }}" class="btn btn-primary btn-danger add_store germania"><span class="glyphicon glyphicon-plus"></span> Ajouter un magasin </a>
+        </div>
+    </div>
+
+    {#<div class="col-lg-12 text-center buttons">#}
+        {#<a href="#" class="btn btn-xs btn-danger all_btn" onclick="displayDiv('all')" title="Faire afficher toutes les salles confondues"><span#}
+                    {#class="glyphicon glyphicon-sort-by-attributes"></span>#}
+            {#All</a>#}
+        {#<a href="#" class="btn btn-xs btn-danger salles_btn" onclick="displayDiv('Salle')" title="Faire afficher que les salles de concert "><span#}
+                    {#class="glyphicon glyphicon-sort-by-attributes"></span>#}
+            {#Salles de concert</a>#}
+        {#<a href="#" class="btn btn-xs btn-danger bar_btn" onclick="displayDiv('Bar')" title="Faire afficher que les bars"><span#}
+                    {#class="glyphicon glyphicon-sort-by-attributes"></span>#}
+            {#Bar</a>#}
+    {#</div>#}
+
+    <div id="storeHolder">
+        {% for store in stores %}
+            <div class="row store">
+                <div class="col-lg-11 oneStoreContainer">
+                    <div class="row">
+                        <p class="col-lg-11 storetitle">{{ store.name }}</p>
+                        <p class="col-lg-1">
+                            {% if store.website is not empty %}
+                                <a href="{{ store.website }}" class="btn btn-xs btn-danger" target="_blank" title='Site Web de "{{ store.name }}"'><span
+                                            class="glyphicon glyphicon-globe"></span> </a>
+                            {% endif %}
+                            {% if store.facebook is not empty %}
+                                <a href="{{ store.facebook }}" class="btn btn-xs btn-danger" target="_blank" title='Page Facebook de "{{ store.name }}"'><span
+                                            class="fa fa-facebook"></span> </a>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <p class="adress cantarell text-uppercase"><i
+                                class="glyphicon glyphicon-map-marker icon"></i> {{ store.adress }}</p>
+                    <p class="description"><span class="germania">Description :</span><br><span
+                                class="cantarell"> {{ store.description }}</span></p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,43 @@
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+    <div class="liveRoomFormContainer">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <p class="text-center germania titleLiveRoomForm"> Ajouter la nouvelle salle</p>
+
+                <div class="formLiveRoom">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% block javascript %}
+        {{ parent() }}
+        <script type="text/javascript">
+
+                $('#LiveRoomHolder').children('.liveroom').each(function() {
+                        var $currentElement = $(this);
+
+                        if (type == 'all') {
+                            $currentElement.show();
+                        } else {
+                            if (type != $currentElement.data('type')) {
+                                $currentElement.hide();
+                            } else {
+                                $currentElement.show();
+                            }
+                        }
+                    }
+                );
+        </script>
+
+    {% endblock %}
+{% endblock %}

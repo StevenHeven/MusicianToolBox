@@ -1,0 +1,85 @@
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+    <div class="offerContainer">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="germania text-uppercase text-center titleLiveRoom">Toutes les Annonces</p>
+                <a href="{{ path('addOffer') }}" class="btn btn-primary btn-danger add_Offer germania"><span
+                            class="glyphicon glyphicon-plus"></span> Ajouter une annonce </a>
+            </div>
+        </div>
+
+        {#<div class="col-lg-12 text-center buttons">#}
+        {#<a href="#" class="btn btn-xs btn-danger all_btn" onclick="displayDiv('all')" title="Faire afficher toutes les salles confondues"><span#}
+        {#class="glyphicon glyphicon-sort-by-attributes"></span>#}
+        {#All</a>#}
+        {#<a href="#" class="btn btn-xs btn-danger salles_btn" onclick="displayDiv('Salle')" title="Faire afficher que les salles de concert "><span#}
+        {#class="glyphicon glyphicon-sort-by-attributes"></span>#}
+        {#Salles de concert</a>#}
+        {#<a href="#" class="btn btn-xs btn-danger bar_btn" onclick="displayDiv('Bar')" title="Faire afficher que les bars"><span#}
+        {#class="glyphicon glyphicon-sort-by-attributes"></span>#}
+        {#Bar</a>#}
+        {#</div>#}
+
+        <div id="OfferHolder">
+            {% for offer in offers %}
+                <div class="row offer">
+                    <div class="col-lg-11 oneOfferContainer">
+                        <div class="textOffer">
+                            <div class="row">
+                                <p class="col-lg-11 offertitle"><a href="{{ path('offer', {'id': offer.id}) }}"> {{ offer.title }}</a></p>
+                                {% if offer.checkpro == 1 %}
+                                    <span class="cantarell"> <a class="btn btn-xs btn-danger pro_btn"
+                                                                title="Je suis un professionnel">P</a></span>
+                                    </p>
+                                {% endif %}
+                            </div>
+                            <div class="row">
+                                <div class="lignCategory text-uppercase">
+                                    <i class="fa fa-tag labelIcon"></i> {{ offer.category }}
+                                </div>
+                            </div>
+                            <div class="row footerOffer">
+                                {% if ( offer.category == "Achat/Vente/Echange") %}
+                                    <p class="col-lg-9 offerprice cantarell text-uppercase">{{ offer.price }} €</p>
+                                {% endif %}
+                                {% if ( offer.category == "Musiciens et groupes" ) %}
+                                    <p class="col-lg-3 offer_sublign cantarell text-uppercase">Recherche Musicien(s) :</p>
+                                    <p class="col-lg-8 cont-bull_musician">
+                                        {% for musician_offer in offer.musician %}
+                                            <span class="bull_infos">
+                                            <i class="fa fa-user-circle"></i> {{ musician_offer.label }}
+                                        </span>
+                                        {% endfor %}
+                                    </p>
+                                {% endif %}
+                                {% if ( offer.category == "Cours" ) %}
+                                    <p class="col-lg-3 cantarell text-uppercase">Instrument(s) :</p>
+                                    <p class="col-lg-8 cont-bull_instrument">
+                                        {% for instrument in offer.instrument %}
+                                            <span class="bull_infos">
+                                            <i class="fa fa-user-circle"></i> {{ instrument.instrument }}
+                                        </span>
+                                        {% endfor %}
+                                    </p>
+                                    <p class="col-lg-9 offerprice cantarell text-uppercase">Prix : {{ offer.price }} € de l'heure</p>
+                                {% endif %}
+                                {% if ( offer.category == "Studio, Salle de répétition, Local") %}
+                                    <p class="col-lg-9 offerprice cantarell text-uppercase">{{ offer.price }} € de l'heure</p>
+                                {% endif %}
+                                <p class="adress-offer cantarell text-right"> {{ offer.adress.city }}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}
+
+

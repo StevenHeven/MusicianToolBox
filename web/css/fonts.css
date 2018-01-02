@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Shredded";
+    src: url("../fonts/shredded.ttf");
+}
+
+@font-face {
+    font-family: "ALL AGES";
+    src: url("../fonts/AllAgesDEMO.ttf");
+}
+
+@font-face {
+    font-family: "ALL AGES_Bold";
+    src: url("../fonts/AllAgesDEMO_BOLD.ttf");
+}
+
+@font-face {
+    font-family: "ALL AGES_Bold_Italic";
+    src: url("../fonts/AllAgesDEMO_BOLDITALIC.ttf");
+}
+
+@font-face {
+    font-family: "Spray Me";
+    src: url("../fonts/sprayme.ttf");
+}

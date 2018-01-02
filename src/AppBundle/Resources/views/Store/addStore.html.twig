@@ -1,0 +1,21 @@
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+    <div class="storeFormContainer">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <p class="text-center germania storeForm"> Ajouter le nouveau magasin</p>
+
+                <div class="formStore">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

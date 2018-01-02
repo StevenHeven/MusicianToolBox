@@ -1,0 +1,157 @@
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+    <div class="offerFormContainer">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <p class="text-center germania offerForm"> Ajouter votre annonce</p>
+
+                <div class="formOffer">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function (){
+                formgroupe=$('.form-group');
+                $(this).find(formgroupe).hide();
+                $(this).find(formgroupe[0]).show();
+
+            $('#appbundle_offer_category').change(function() {
+                //Use $option (with the "$") to see that the variable is a jQuery object
+                var $option = $(this).find('option:selected');
+                //Added with the EDIT
+                var value = $option.val();//to get content of "value" attrib
+                if (value == 0) {
+                    $(formgroupe).hide();
+                    $(formgroupe[0]).show();
+                    $("#appbundle_offer").append('<div class="col-lg-5 col-lg-offset-4 text-center errorCategory"> Veuillez choisir une catégorie s\'il vous plaît</div>');
+                }
+                if (value == 1){
+                    $('.errorCategory').hide();
+                    $(formgroupe).hide();
+                    $(formgroupe[0]).show();
+                    $(formgroupe[1]).show();
+                    $(formgroupe[4]).show();
+                    $(formgroupe[5]).show();
+                    $(formgroupe[6]).show();
+                    $(formgroupe[7]).show();
+                    $(formgroupe[8]).show();
+                    $(formgroupe[9]).show();
+                    $(formgroupe[10]).show();
+                    $(formgroupe[11]).show();
+                    $(formgroupe[12]).show();
+                    $(formgroupe[13]).show();
+                    $(formgroupe[14]).show();
+                    $(formgroupe[15]).show();
+                    $(formgroupe[16]).show();
+                    $(formgroupe[17]).show();
+                    $(formgroupe[18]).show();
+                    $(formgroupe[19]).show();
+                    $(formgroupe[20]).show();
+
+
+                }
+                if (value == 2){
+                    $('.errorCategory').hide();
+                    $(formgroupe).hide();
+                    $(formgroupe[0]).show();
+                    $(formgroupe[1]).show();
+                    $(formgroupe[2]).show();
+                    $(formgroupe[3]).show();
+                    $(formgroupe[7]).show();
+                    $(formgroupe[8]).show();
+                    $(formgroupe[9]).show();
+                    $(formgroupe[10]).show();
+                    $(formgroupe[11]).show();
+                    $(formgroupe[13]).show();
+                    $(formgroupe[14]).show();
+                    $(formgroupe[15]).show();
+                    $(formgroupe[16]).show();
+                    $(formgroupe[17]).show();
+                    $(formgroupe[18]).show();
+                    $(formgroupe[19]).show();
+                    $(formgroupe[20]).show();
+
+                }
+                if (value == 3){
+                    $('.errorCategory').hide();
+                    $(formgroupe).hide();
+                    $(formgroupe[0]).show();
+                    $(formgroupe[1]).show();
+                    $('label[for="appbundle_offer_price"]').html("Prix/h");
+                    $(formgroupe[4]).show();
+                    $(formgroupe[5]).show();
+                    $(formgroupe[7]).show();
+                    $(formgroupe[8]).show();
+                    $(formgroupe[9]).show();
+                    $(formgroupe[10]).show();
+                    $(formgroupe[11]).show();
+                    $(formgroupe[13]).show();
+                    $(formgroupe[14]).show();
+                    $(formgroupe[15]).show();
+                    $(formgroupe[16]).show();
+                    $(formgroupe[17]).show();
+                    $(formgroupe[18]).show();
+                    $(formgroupe[19]).show();
+                    $(formgroupe[20]).show();
+                }
+                if (value == 4){
+                    $('.errorCategory').hide();
+                    $(formgroupe).hide();
+                    $(formgroupe[0]).show();
+                    $(formgroupe[1]).show();
+                    $('label[for="appbundle_offer_price"]').html("Prix/h");
+                    $(formgroupe[5]).show();
+                    $(formgroupe[7]).show();
+                    $(formgroupe[8]).show();
+                    $(formgroupe[9]).show();
+                    $(formgroupe[10]).show();
+                    $(formgroupe[11]).show();
+                    $(formgroupe[13]).show();
+                    $(formgroupe[14]).show();
+                    $(formgroupe[15]).show();
+                    $(formgroupe[16]).show();
+                    $(formgroupe[17]).show();
+                    $(formgroupe[18]).show();
+                    $(formgroupe[19]).show();
+                    $(formgroupe[20]).show();
+                }
+                if (value == 5){
+                    $('.errorCategory').hide();
+                    $(formgroupe).hide();
+                    $(formgroupe[0]).show();
+                    $(formgroupe[1]).show();
+                    $(formgroupe[7]).show();
+                    $(formgroupe[8]).show();
+                    $(formgroupe[9]).show();
+                    $(formgroupe[10]).show();
+                    $(formgroupe[11]).show();
+                    $(formgroupe[13]).show();
+                    $(formgroupe[14]).show();
+                    $(formgroupe[15]).show();
+                    $(formgroupe[16]).show();
+                    $(formgroupe[17]).show();
+                    $(formgroupe[18]).show();
+                    $(formgroupe[19]).show();
+                    $(formgroupe[20]).show();
+                }
+            });
+
+
+            })
+    </script>
+
+{% endblock %}

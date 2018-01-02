@@ -1,0 +1,901 @@
+/*-------------------------------------------------------
+    General Styles
+-------------------------------------------------------*/
+
+body {
+    background: url('../img/bg-pattern.png');
+    font-family: 'Helvetica Neue', 'Arial' sans-serif;
+    font-family: 'Dosis';
+    font-size: 14px;
+    color: #777777;
+    min-width: 320px;
+    line-height: 24px;
+}
+
+body:before, body:after {
+    content: "";
+    position: absolute;
+    background: url('../img/photos/bg.jpg') repeat-x; /* Images in background */
+    width: 100%;
+    height: 498px;
+    top: 160px;
+    left: 0;
+    z-index: -1;
+}
+
+body:after {
+    background: rgba(240, 73, 51, 0.85); /* Background color overlay */
+}
+
+body.index:before, body.index:after {
+    height: 984px;
+}
+
+.germania {
+    font-family: 'Germania One', cursive;
+    font-size: 18px;
+}
+
+.cantarell {
+    font-family: 'Cantarell', sans-serif;
+}
+
+.form-control {
+    background-color: #000000 !important;
+    border-color: transparent;
+    color: white;
+}
+
+.form-control:focus {
+    border-color: #db4a37;
+    -webkit-box-shadow: 1px 1px 5px 3px #db4a37;
+    box-shadow: 1px 1px 5px 3px #db4a37;
+}
+
+#appbundle_liveroom_type > option::selection {
+    background-color: #db4a37 !important;
+}
+
+.input-group-addon {
+    font-size: 20px;
+    background-color: #570006;
+    border-color: transparent;
+    color: darkgrey;
+    font-weight: bold;
+    font-family: 'Cantarell', sans-serif;
+}
+
+
+#appbundle_liveroom_submit, #appbundle_store_submit, #appbundle_offer_submit, .btn-back, .btn_login, #fos_user_registration_form_submit {
+    margin-left: 40%;
+    min-width: 75px;
+    width: 125px;
+    background-color: #0f0f0f;
+    border-color: #db4a37;
+    font-family: "Germania One", sans-serif;
+    color: #db4a37;
+}
+
+.btn_login, #fos_user_registration_form_submit{
+    margin-left: 0;
+}
+
+#appbundle_liveroom_submit:hover, #appbundle_store_submit:hover, #appbundle_offer_submit:hover, .btn-back:hover, .btn_login:hover, #fos_user_registration_form_submit:hover{
+    background-color: #0f0f0f;
+    color: #f3b414;
+    border-color: #db4a37;
+}
+
+    /*-------------------------------------------------------
+        Top Bar Styles
+    -------------------------------------------------------*/
+
+#top-bar {
+    height: 40px;
+    background: #2c2c2c;
+    box-shadow: 0px 0px 1px #202020;
+    line-height: 40px;
+}
+
+#site-description {
+    width: 270px;
+    float: left;
+    color: #db4a37;
+}
+
+#top-links {
+    list-style: none;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+#top-links li {
+    float: left;
+    border-right: 1px solid #363636;
+}
+
+#top-links li:first-child {
+    border-left: 1px solid #363636;
+}
+
+#top-links li a {
+    height: 40px;
+    display: block;
+    color: #777777;
+    padding: 0 25px 0 17px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600; /* Semi bold */
+}
+
+#top-links li a:hover {
+    text-decoration: none;
+    background-color: #474747 !important;
+}
+
+#top-links li.login a .fa {
+    margin-right: 10px;
+}
+
+#top-links li.register a .fa {
+    margin-right: 10px;
+}
+
+#top-links li.facebook a, #top-links li.twitter a,
+#top-links li.google-plus a, #top-links li.youtube a,
+#top-links li.search a {
+    padding: 0 20px;
+}
+
+#top-links li.facebook a {
+    background: transparent url('../img/facebook.png') center center no-repeat;
+}
+
+#top-links li.twitter a {
+    background: transparent url('../img/twitter.png') center center no-repeat;
+}
+
+#top-links li.google-plus a {
+    background: transparent url('../img/googleplus.png') center center no-repeat;
+}
+
+#top-links li.youtube a {
+    background: transparent url('../img/youtube.png') center center no-repeat;
+}
+
+#top-links li.search a {
+    background: transparent url('../img/search.png') center center no-repeat;
+}
+
+#top-links li.search #top-search {
+    float: left;
+    height: 40px;
+    background: #2c2c2c;
+    border: none;
+    outline: none;
+    line-height: 24px;
+    padding: 7px 15px;
+    color: #777777;
+    display: none;
+}
+
+#top-links li.search a {
+    float: right;
+}
+
+/*-------------------------------------------------------
+	Header Styles
+-------------------------------------------------------*/
+
+.navbar > .container .navbar-brand {
+    line-height: 120px;
+    height: 50px;
+    padding: 0;
+    margin-left: 0px;
+}
+
+.logo {
+    display: flex;
+}
+
+.img-navbar-brand {
+    width: 250px;
+    height: 250px;
+    margin-left: -40%;
+    margin-top: -30%;
+    /*background: -webkit-radial-gradient(circle closest-side, rgba(255,255,255,1) 0, rgba(43,43,43,1) 100%);*/
+    /*background: -moz-radial-gradient(circle closest-side, rgba(255,255,255,1) 0, rgba(43,43,43,1) 100%);*/
+    /*background: radial-gradient(circle closest-side, rgba(255,255,255,1) 0, rgba(43,43,43,1) 100%);*/
+}
+
+.title {
+    font-family: Shredded;
+    font-style: italic;
+    font-size: 9em;
+    color: white;
+    margin-left: -10%;
+    margin-top: 2%;
+    padding-bottom: 0;
+}
+
+.menu {
+    margin-top: -4px;
+}
+
+ul.nav > li {
+    height: 120px;
+    line-height: 120px;
+}
+
+#main-nav ul.nav li a {
+    background: transparent;
+    color: #777777;
+    text-transform: uppercase;
+    font-size: 15px;
+    height: 120px;
+    line-height: 90px;
+    margin: 0px 0;
+    float: right;
+    font-weight: 600; /* Semi bold */
+}
+
+#main-nav ul.nav li:before {
+    content: '//';
+    float: left;
+    font-weight: 600; /* Semi bold */
+    color: #777777;
+}
+
+#main-nav ul.nav li:first-child:before {
+    content: '';
+}
+
+#main-nav ul.nav li.current a,
+#main-nav ul.nav li a:hover {
+    color: #db4a37;
+}
+
+.navbar {
+    background: #2c2c2c;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    height: 135px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #707070;
+    background-color: transparent;
+    margin: 43px 15px 43px 0;
+    outline: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #707070;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    border-color: #db4a37;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #db4a37;
+}
+
+#main-nav .navbar-nav > .dropdown > a:hover .caret {
+    border-top-color: #db4a37;
+    border-bottom-color: #db4a37;
+}
+
+#main-nav .navbar-nav > .dropdown li:before {
+    content: '';
+}
+
+#main-nav .navbar-nav > .dropdown li {
+    height: 40px;
+    line-height: 40px;
+}
+
+#main-nav .navbar-nav > .dropdown li a {
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    float: none;
+}
+
+#main-nav .navbar-nav > .dropdown li a:hover {
+    background: #474747;
+}
+
+#main-nav .dropdown-menu {
+    background: #2c2c2c;
+    padding: 0;
+    border-color: #222222;
+    top: 72% !important;
+}
+
+#main-nav ul.dropdown-menu li:last-child a {
+    border-radius: 0px 0px 4px 4px;
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse .dropdown-menu {
+        position: static;
+        top: auto;
+        left: auto;
+        display: block;
+        float: none;
+        max-width: none;
+        padding: 0;
+        margin: 0 15px;
+        border: 0;
+        box-shadow: none;
+    }
+
+    #main-nav ul.nav > li.dropdown {
+        height: auto;
+    }
+
+    #main-nav ul.nav > li.dropdown a:hover {
+        background: transparent;
+    }
+}
+
+#breadcrumbs {
+    height: 150px;
+    line-height: 150px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#breadcrumbs .fa {
+    margin: 0 5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#breadcrumbs a {
+    color: white;
+}
+
+#tagline {
+    width: 1370px;
+    background: #282828;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 15px 0 40px;
+}
+
+#tagline h1 {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+#tagline h4 {
+    font-size: 18px;
+    text-transform: none;
+    font-weight: 400;
+    color: #db4a37;
+}
+
+/*-------------------------------------------------------
+    Login Page Styles
+-------------------------------------------------------*/
+
+.form_login{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+
+.label_username{
+    margin-left: 4px;
+    margin-top: 20px;
+}
+
+.input_login{
+    background-color: #0f0f0f;
+    border-radius: 5px;
+    border-color: #db4a37;
+    width: 25%;
+    text-align: center;
+}
+
+.input_login:focus{
+    border-color: #db4a37 !important;
+    -webkit-box-shadow: 1px 1px 5px 3px #db4a37;
+    box-shadow: 1px 1px 5px 3px #db4a37;
+}
+
+/*-------------------------------------------------------
+    Register Page Styles
+-------------------------------------------------------*/
+
+.form_registration{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.form_registration_cont{
+    background-color: #000000;
+    border: 1px solid #db4a37;
+}
+
+#fos_user_registration_form > .form-group > label, #fos_user_registration_form_adress > .form-group > label{
+    font-family: "Germania One", sans-serif;
+    font-size: 1.5em;
+    color: #db4a37;
+}
+
+#fos_user_registration_form > .form-group > input, #fos_user_registration_form_adress > .form-group > input{
+    border: outset 2px #db4a37;
+    padding-bottom: 10px !important;
+}
+
+#fos_user_registration_form_musician > .radio {
+    color: #db4a37;
+}
+
+
+#fos_user_registration_form > .form-group > .form-control, #fos_user_registration_form_adress > .form-group >.form-control{
+    width: 70% !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.fos_user_registration_register > div > input[type="submit"]{
+    display: none;
+}
+
+.register_confirmed_container{
+    background-color: #000000;
+    border-radius: 10px;
+    color: white;
+    font-family: "Cantarell", sans-serif;
+    margin : 2% 0 2% 0;
+    padding: 2% 2% 1% 2%;
+    text-align: center;
+}
+
+/*-------------------------------------------------------
+    Index All Page Styles
+-------------------------------------------------------*/
+
+.titleLiveRoom, .titleStore, .titleOffer {
+    color: ghostwhite;
+    font-size: 30px;
+}
+
+.liveRoomContainer, .storeContainer, .offerContainer, .socialContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 0 20px 20px 20px;
+    border-radius: 25px;
+}
+
+.socialContainer{
+    text-align: center;
+}
+
+.buttons {
+    padding-bottom: 10px;
+}
+
+.buttons > a {
+    margin-left: 5px;
+}
+
+.add_liveRoom {
+    margin-top: -10px;
+    margin-left: 70.5%;
+}
+
+.add_store, .add_Offer {
+    margin-top: -47px;
+    margin-left: 70.5%;
+}
+
+.oneLiveRoomContainer, .oneStoreContainer, .oneOfferContainer, .offer-content {
+    background-color: #000000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    padding-top: 20px;
+    color: white;
+}
+
+.roomtitle, .storetitle {
+    font-family: "ALL AGES", serif;
+    font-size: 3em;
+    padding-left: 25px;
+}
+
+.fa-facebook {
+    padding: 3px;
+}
+
+.icon {
+    color: #db4a37;
+}
+
+.adress {
+    margin-bottom: 20px;
+}
+
+.description {
+    line-height: 1.2;
+}
+
+/*-------------------------------------------------------
+    Form All Page Styles
+-------------------------------------------------------*/
+
+.liveRoomFormContainer, .storeFormContainer, .offerFormContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 0 20px 20px 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+.titleLiveRoomForm, .storeForm, .offerForm {
+    font-size: 30px;
+}
+
+/*-------------------------------------------------------
+    Index Offer Styles
+-------------------------------------------------------*/
+
+.oneOfferContainer {
+    padding-top: 10px !important;
+}
+
+.textOffer {
+    margin-left: 20%;
+}
+
+.offertitle {
+    font-size: 40px;
+    font-family: "Spray Me", cursive;
+
+}
+
+.offertitle a {
+    color: white;
+    text-decoration: none;
+}
+
+.offertitle a:hover {
+    color: #db4a37;
+}
+
+.pro_btn {
+    color: #0f0f0f;
+    font-weight: bold;
+    margin-left: 3%;
+}
+
+.lignCategory {
+    margin-left: 1.5%;
+    margin-top: -1%;
+}
+
+.labelIcon {
+    padding: 5px;
+}
+
+.footerOffer {
+    margin-top: 2%;
+}
+
+.adress-offer {
+    margin-right: 2%;
+}
+
+.offerprice {
+    color: #db4a37;
+    font-weight: bold;
+}
+
+.offer_sublign {
+    font-size: smaller;
+    font-weight: bold;
+    color: #db4a37;
+}
+
+.cont-bull_musician {
+    margin-left: -6%;
+}
+
+.bull_infos {
+    background-color: #4a0009;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.cont-bull_instrument {
+    margin-left: -11%;
+}
+
+/*-------------------------------------------------------
+    Add Offer Styles
+-------------------------------------------------------*/
+
+#appbundle_offer_style > .checkbox, #appbundle_offer_instrument > .checkbox, #appbundle_offer_musician > .checkbox, #fos_user_registration_form_musician > .radio, #appbundle_concert_style > .checkbox {
+    display: block;
+    width: 25%;
+    float: left;
+}
+
+#appbundle_offer_image > .form-group > .control-label {
+    display: none;
+}
+
+.errorCategory {
+    color: white;
+    font-weight: bold;
+    font-family: "Cantarell", sans-serif;
+    background-color: rgba(232, 34, 8, 0.7);
+    border-radius: 10px;
+}
+
+/*-------------------------------------------------------
+    OneOffer Styles
+-------------------------------------------------------*/
+
+.offer-content {
+    margin-top: 3%;
+}
+
+.offertitle {
+    margin-bottom: 10px;
+}
+
+.offerprice-top {
+    margin-left: -10px;
+    font-size: 2em;
+    color: #db4a37;
+}
+
+.top-offer {
+    margin-bottom: 10px;
+}
+
+.picture-cont {
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.picture-cont > img {
+    max-width: 700px;
+}
+
+.lign-category {
+    margin-left: 0px;
+}
+
+.btn-back {
+    width: 5%;
+    margin-left: 21.5%;
+    margin-bottom: 2%;
+}
+
+.offer-description {
+    margin-left: 7%;
+    margin-right: 7%;
+    border-top: solid 1px grey;
+}
+
+.bull_musician_oneOffer > .bull_infos {
+    margin-top: 2%;
+}
+
+.hide-bullets {
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
+
+/*-------------------------------------------------------
+	Footer Styles
+-------------------------------------------------------*/
+
+footer {
+    width: 1370px;
+    background: #191919;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 30px 0 0;
+    color: white;
+}
+
+.gototop {
+    text-align: right;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.gototop a {
+    margin-right: 5px;
+    font-size: 12px;
+    color: #777777;
+    text-decoration: none;
+}
+
+.gototop a:hover {
+    color: #f04933;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.unique {
+    font-weight: bold;
+    color: #f04933;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+footer h3 .fa {
+    margin-right: 5px;
+    font-size: 22px;
+}
+
+footer .footer-col {
+    background: url('../img/separator.png') right top repeat-y;
+    padding-right: 36px;
+    min-height: 100%;
+    padding-bottom: 20px;
+}
+
+footer .footer-col:last-child {
+    background: none;
+}
+
+ul.tweets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.tweets li {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+ul.tweets li span {
+    color: white;
+}
+
+ul.links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.links li a {
+    color: #777777;
+    font-size: 14px;
+}
+
+ul.links li a:hover {
+    color: #f04933;
+}
+
+.links-col:last-child {
+    padding-left: 0;
+}
+
+.subscribe-form {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.subscribe-form .email {
+    float: left;
+    width: 60%;
+    height: 40px;
+    background: #2c2c2c;
+    border: none;
+    outline: none;
+    line-height: 24px;
+    padding: 7px 15px;
+    color: #777777;
+}
+
+.subscribe-form .submit {
+    float: left;
+    height: 40px;
+    width: 75px;
+    background: #f04933;
+    border: none;
+    outline: none;
+    line-height: 24px;
+    padding: 7px 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.subscribe-form .submit:hover {
+    background: #db4a37;
+}
+
+.bottom-footer {
+    font-size: 12px;
+    border-top: 1px solid #282828;
+    padding: 30px 0 35px;
+}
+
+.love {
+    text-align: center;
+}
+
+.love .fa {
+    color: #f04933;
+    font-size: 11px;
+    margin-right: 3px;
+}
+
+ul.social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+ul.social li {
+    float: left;
+    margin-left: 10px;
+}
+
+ul.social li a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background: #777777;
+    color: #191919;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+}
+
+ul.social li a:hover {
+    background: #f04933;
+    color: white;
+}
