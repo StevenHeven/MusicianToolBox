@@ -1,0 +1,40 @@
+{% extends "::base-admin.html.twig" %}
+
+{% block content %}
+
+    <p>Voici toutes les petites annonces postées par ordre de publications : </p>
+    <br>
+    <table class="table table-striped text-center">
+        <tr class="listTd">
+            <td>Id</td>
+            <td>Titre</td>
+            <td>Catégorie</td>
+            <td>Prix</td>
+            <td>Actions</td>
+        </tr>
+        {% for offer in offers %}
+            <tr>
+                <td>{{ offer.id }}</td>
+                <td>{{ offer.title }}</td>
+                <td>{{ offer.category }}</td>
+                <td>{{ offer.price }}</td>
+                <td>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Action <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu ">
+                            <li><a href="{{ path("editOffer", {"id": offer.id}) }}"><i
+                                            class="glyphicon glyphicon-pencil"></i> &nbsp;Editer</a></li>
+                            <li><a href="{{ path("deleteOffer", {"id": offer.id}) }}"><i
+                                            class="glyphicon glyphicon-remove"></i> &nbsp;Supprimer</a></li>
+
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

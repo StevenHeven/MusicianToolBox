@@ -4,7 +4,7 @@
     <list default="true" id="5cbc5ff1-8703-43e5-953f-0067fea49017" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base-admin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base-admin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/LiveRoomAdminController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/LiveRoomAdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/OfferAdmin/offerAdmin.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/OfferAdmin/offerAdmin.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,21 +33,46 @@
       <file leaf-file-name="StoreAdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/StoreAdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
+            <state relative-caret-position="585">
               <caret line="88" column="44" lean-forward="false" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
               <folding>
                 <element signature="e#134#161#0#PHP" expanded="true" />
                 <element signature="e#856#896#0#PHP" expanded="true" />
                 <element signature="e#1458#1471#1#PHP" expanded="true" />
                 <element signature="e#1514#1558#0#PHP" expanded="true" />
-                <element signature="e#2207#2220#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editStoreAdmin.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/editStoreAdmin.html.twig">
+      <file leaf-file-name="OfferAdminController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/OfferAdminController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="49" column="38" lean-forward="false" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+              <folding>
+                <element signature="e#134#161#0#PHP" expanded="true" />
+                <element signature="e#869#909#0#PHP" expanded="true" />
+                <element signature="e#1478#1491#1#PHP" expanded="true" />
+                <element signature="e#1534#1578#0#PHP" expanded="true" />
+                <element signature="e#2230#2243#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfferController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/OfferController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="28" column="60" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editOfferAdmin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/OfferAdmin/editOfferAdmin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
@@ -59,69 +84,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LiveRoomAdminController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/LiveRoomAdminController.php">
+      <file leaf-file-name="offerAdmin.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/OfferAdmin/offerAdmin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="493">
+              <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
               <folding>
-                <element signature="e#134#164#0#PHP" expanded="true" />
-                <element signature="e#888#939#0#PHP" expanded="true" />
-                <element signature="e#1535#1551#1#PHP" expanded="true" />
-                <element signature="e#1594#1644#0#PHP" expanded="true" />
-                <element signature="e#2320#2336#1#PHP" expanded="true" />
+                <element signature="e#1062#1071#0#Twig" expanded="true" />
+                <element signature="e#1255#1266#0#Twig" expanded="true" />
+                <element signature="e#1378#1384#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="liveRoomAdminIndex.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/LiveRoomAdmin/liveRoomAdminIndex.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="14" />
-              <folding>
-                <element signature="e#926#938#0#Twig" expanded="true" />
-                <element signature="e#1125#1139#0#Twig" expanded="true" />
-                <element signature="e#1254#1260#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editLiveroomAdmin.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/LiveRoomAdmin/editLiveroomAdmin.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
-              <folding>
-                <element signature="e#20#48#0#Twig" expanded="true" />
-                <element signature="e#65#87#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storeAdmin.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/storeAdmin.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="26" column="76" lean-forward="false" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
-              <folding>
-                <element signature="e#915#924#0#Twig" expanded="true" />
-                <element signature="e#1108#1119#0#Twig" expanded="true" />
-                <element signature="e#1231#1237#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StoreType.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/StoreType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -136,12 +108,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Store.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Store.php">
+      <file leaf-file-name="editStoreAdmin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/editStoreAdmin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
+              <folding>
+                <element signature="e#20#48#0#Twig" expanded="true" />
+                <element signature="e#65#87#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storeAdmin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/storeAdmin.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="36" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="14" />
+              <folding>
+                <element signature="e#915#924#0#Twig" expanded="true" />
+                <element signature="e#1108#1119#0#Twig" expanded="true" />
+                <element signature="e#1231#1237#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,11 +138,12 @@
       <file leaf-file-name="base-admin.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base-admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            <state relative-caret-position="187">
+              <caret line="38" column="154" lean-forward="false" selection-start-line="38" selection-start-column="154" selection-end-line="38" selection-end-column="154" />
               <folding>
                 <element signature="e#1338#1352#0#Twig" expanded="true" />
                 <element signature="e#1529#1540#0#Twig" expanded="true" />
+                <element signature="e#1708#1719#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,9 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Service/UploadImage.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Offer/indexOffer.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/OfferType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/ImageType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Offer/addOffer.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/OfferController.php" />
@@ -220,10 +207,13 @@
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/LiveRoomAdmin/editLiveroomAdmin.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/LiveRoomAdmin/liveRoomAdminIndex.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/LiveRoomAdminController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base-admin.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/editStoreAdmin.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/StoreAdminController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/storeAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/OfferAdmin/editOfferAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base-admin.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/StoreAdminController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/OfferAdminController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/OfferAdmin/offerAdmin.html.twig" />
       </list>
     </option>
   </component>
@@ -372,7 +362,29 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
+              <option name="myItemId" value="Repository" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicianToolBox-dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicianToolBox-dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,10 +431,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StoreAdmin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -447,6 +455,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferAdmin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -713,7 +725,7 @@
       <workItem from="1514888742256" duration="248000" />
       <workItem from="1514889011032" duration="1806000" />
       <workItem from="1514890842168" duration="13532000" />
-      <workItem from="1514967725279" duration="9659000" />
+      <workItem from="1514967725279" duration="11558000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout du footer, modification du nav et ajout du logo">
       <created>1507038469124</created>
@@ -733,7 +745,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284405000" />
+    <option name="totallyTimeSpent" value="286304000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -806,30 +818,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/LiveRoom/addLiveRoom.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/LiveRoomController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="50" column="5" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="e#130#160#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Offer/addOffer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="45" lean-forward="false" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ImageType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -865,14 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/OfferController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="40" column="18" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,11 +1125,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Store.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/LiveRoomAdmin/editLiveroomAdmin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="e#20#48#0#Twig" expanded="true" />
+            <element signature="e#65#87#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1167,43 +1150,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base-admin.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/StoreType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="527">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Store.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/storeAdmin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="14" />
           <folding>
-            <element signature="e#1338#1352#0#Twig" expanded="true" />
-            <element signature="e#1529#1540#0#Twig" expanded="true" />
+            <element signature="e#915#924#0#Twig" expanded="true" />
+            <element signature="e#1108#1119#0#Twig" expanded="true" />
+            <element signature="e#1231#1237#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/LiveRoomAdmin/editLiveroomAdmin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="e#20#48#0#Twig" expanded="true" />
-            <element signature="e#65#87#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/StoreAdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="88" column="44" lean-forward="false" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
-          <folding>
-            <element signature="e#134#161#0#PHP" expanded="true" />
-            <element signature="e#856#896#0#PHP" expanded="true" />
-            <element signature="e#1458#1471#1#PHP" expanded="true" />
-            <element signature="e#1514#1558#0#PHP" expanded="true" />
-            <element signature="e#2207#2220#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/editStoreAdmin.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/OfferAdmin/editOfferAdmin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
@@ -1211,6 +1186,39 @@
             <element signature="e#20#48#0#Twig" expanded="true" />
             <element signature="e#65#87#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base-admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="38" column="154" lean-forward="false" selection-start-line="38" selection-start-column="154" selection-end-line="38" selection-end-column="154" />
+          <folding>
+            <element signature="e#1338#1352#0#Twig" expanded="true" />
+            <element signature="e#1529#1540#0#Twig" expanded="true" />
+            <element signature="e#1708#1719#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/StoreAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="88" column="44" lean-forward="false" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
+          <folding>
+            <element signature="e#134#161#0#PHP" expanded="true" />
+            <element signature="e#856#896#0#PHP" expanded="true" />
+            <element signature="e#1458#1471#1#PHP" expanded="true" />
+            <element signature="e#1514#1558#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/OfferController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="28" column="60" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,23 +1230,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/storeAdmin.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/StoreAdmin/editStoreAdmin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="26" column="76" lean-forward="false" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
           <folding>
-            <element signature="e#915#924#0#Twig" expanded="true" />
-            <element signature="e#1108#1119#0#Twig" expanded="true" />
-            <element signature="e#1231#1237#0#HTML" expanded="true" />
+            <element signature="e#20#48#0#Twig" expanded="true" />
+            <element signature="e#65#87#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/StoreType.php">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/OfferAdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="391">
+          <caret line="49" column="38" lean-forward="false" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+          <folding>
+            <element signature="e#134#161#0#PHP" expanded="true" />
+            <element signature="e#869#909#0#PHP" expanded="true" />
+            <element signature="e#1478#1491#1#PHP" expanded="true" />
+            <element signature="e#1534#1578#0#PHP" expanded="true" />
+            <element signature="e#2230#2243#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/OfferAdmin/offerAdmin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+          <folding>
+            <element signature="e#1062#1071#0#Twig" expanded="true" />
+            <element signature="e#1255#1266#0#Twig" expanded="true" />
+            <element signature="e#1378#1384#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

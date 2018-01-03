@@ -36,7 +36,7 @@
             <ul class="nav nav-pills pull-right">
                 <li {% if app.request.get('_route') is same as('liveroom.index') %}class="active"{% endif %}role="presentation"><a href="{{ path('liveroom.index') }}">Salles de concert</a></li>
                 <li {% if app.request.get('_route') is same as('store.index') %}class="active"{% endif %}role="presentation"><a href="{{ path('store.index') }}">Magasins</a></li>
-                <li {% if app.request.get('_route') is same as('offer.index') %}class="active"{% endif %}role="presentation"><a href="#">Petites Annonces</a></li>
+                <li {% if app.request.get('_route') is same as('offer.index') %}class="active"{% endif %}role="presentation"><a href="{{ path('offer.index') }}">Petites Annonces</a></li>
                 <li {% if app.request.get('_route') is same as('concert.index') %}class="active"{% endif %}role="presentation"><a href="#">Concerts</a></li>
             </ul>
         </nav>
