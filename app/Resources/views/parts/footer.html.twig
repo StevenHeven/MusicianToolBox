@@ -22,17 +22,17 @@
                     <div class="row">
                         <div class="col-xs-6 links-col">
                             <ul class="links">
-                                <li><a href="#">Acceuil</a></li>
-                                <li><a href="#">Salles/Bar</a></li>
-                                <li><a href="#">Magasins</a></li>
-                                <li><a href="#">Petites Annonces</a></li>
+                                <li><a href="{{ path('homepage') }}">Acceuil</a></li>
+                                <li><a href="{{ path('indexLiveRoom') }}">Salles de concert/Bar</a></li>
+                                <li><a href="{{ path('indexStore') }}">Magasins</a></li>
+                                <li><a href="{{ path('indexOffer') }}">Petites Annonces</a></li>
                             </ul>
                         </div>
                         <div class="col-xs-6 links-col">
                             <ul class="links">
-                                <li><a href="#">Concerts</a></li>
-                                <li><a href="#">Social</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{ path('indexConcert') }}">Concerts</a></li>
+                                <li><a href="{{ path('indexSocial') }}">Social</a></li>
+                                <li><a href="{{ path('contact') }}">Contact</a></li>
                             </ul>
                         </div>
                     </div>
