@@ -13,6 +13,7 @@ use AppBundle\Entity\LiveRoom;
 use AppBundle\Form\LiveRoomType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -41,7 +42,7 @@ class LiveRoomAdminController extends Controller
     /**
      * @Route("/edit/{id}", name="editLiveroom")
      */
-    //methode qui modifie une catégorie
+    //methode qui modifie une salle de concert
     public function editAction($id, Request $request){
 
         $liveroom= $this->getDoctrine()->getRepository(LiveRoom::class)->find($id);
@@ -62,28 +63,28 @@ class LiveRoomAdminController extends Controller
 
 
     }
-//
-//    /**
-//     * @Route("/delete/{id}", name="deleteCategory")
-//     * @param Category $category
-//     * @param $id
-//     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-//     */
-//    //methode qui supprime une catégorie
-//    public function deleteAction(Category $category, $id)
-//    {
-//
-//        try{
-//            $em = $this->getDoctrine()->getManager();
-//            $em->remove($category);
-//            $em->flush();
-//        }
-//
-//        catch (Exception $e){
-//            throw $this->createNotFoundException("Category does not exist with num ".$id);
-//        }
-//
-//
-//        return $this->redirectToRoute("category.index");
-//    }
+
+    /**
+     * @Route("/delete/{id}", name="deleteLiveRoom")
+     * @param LiveRoom $liveroom
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    //methode qui supprime une catégorie
+    public function deleteAction(LiveRoom $liveroom, $id)
+    {
+
+        try{
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($liveroom);
+            $em->flush();
+        }
+
+        catch (Exception $e){
+            throw $this->createNotFoundException("La salle de concert #".$id." n'existe pas ou a été déjà supprimé");
+        }
+
+
+        return $this->redirectToRoute("liveroom.index");
+    }
 }
