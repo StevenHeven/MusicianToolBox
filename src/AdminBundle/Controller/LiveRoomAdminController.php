@@ -18,9 +18,9 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  *
- * @Route("/admin/liveroom")
+ * @Route("/admin/liverooms")
  *
- * Class liveroomController
+ * Class LiveroomAdminController
  * @package AdminBundle\Controller
  */
 class LiveRoomAdminController extends Controller

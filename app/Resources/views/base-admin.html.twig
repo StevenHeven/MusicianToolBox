@@ -35,9 +35,9 @@
         <nav>
             <ul class="nav nav-pills pull-right">
                 <li {% if app.request.get('_route') is same as('liveroom.index') %}class="active"{% endif %}role="presentation"><a href="{{ path('liveroom.index') }}">Salles de concert</a></li>
-                <li role="presentation"><a href="#">Magasins</a></li>
-                <li role="presentation"><a href="#">Petites Annonces</a></li>
-                <li role="presentation"><a href="#">Concerts</a></li>
+                <li {% if app.request.get('_route') is same as('store.index') %}class="active"{% endif %}role="presentation"><a href="{{ path('store.index') }}">Magasins</a></li>
+                <li {% if app.request.get('_route') is same as('offer.index') %}class="active"{% endif %}role="presentation"><a href="#">Petites Annonces</a></li>
+                <li {% if app.request.get('_route') is same as('concert.index') %}class="active"{% endif %}role="presentation"><a href="#">Concerts</a></li>
             </ul>
         </nav>
         <img class="logo" src="{{ asset('img/Logo.svg') }}"> <h3 class="text-muted">MTB ADMIN</h3>
@@ -52,7 +52,7 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; 2017 Steven Heven, Inc.</p>
     </footer>
 
 </div> <!-- /container -->
