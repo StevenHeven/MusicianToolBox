@@ -4,23 +4,26 @@
 
     <p>Voici toutes les petites annonces postées par ordre de publications : </p>
     <br>
-    <table class="table table-striped text-center">
+    <table id="table_admin" class="table table-striped display dt-center" data-order='[[1,"desc"]]'>
+        <thead>
         <tr class="listTd">
-            <td>Id</td>
-            <td>Titre</td>
-            <td>Catégorie</td>
-            <td>Prix</td>
-            <td>Actions</td>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Catégorie</th>
+            <th>Prix</th>
+            <th>Actions</th>
         </tr>
+        </thead>
+        <tbody>
         {% for offer in offers %}
             <tr>
                 <td>{{ offer.id }}</td>
                 <td>{{ offer.title }}</td>
                 <td>{{ offer.category }}</td>
-                <td>{{ offer.price }}</td>
+                <td>{{ offer.price }} € </td>
                 <td>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown"
+                        <button type="button" class="btn btn-sm btn_action dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             Action <span class="caret"></span>
                         </button>
@@ -35,6 +38,7 @@
                 </td>
             </tr>
         {% endfor %}
+        </tbody>
     </table>
 
 {% endblock %}

@@ -4,13 +4,16 @@
 
     <p>Voici tous les magasins enregistrés dans notre BDD : </p>
     <br>
-    <table class="table table-striped text-center">
+    <table id="table_admin" class="table table-striped text-center display">
+        <thead>
         <tr class="listTd">
-            <td>Id</td>
-            <td>Nom du magasin</td>
-            <td>Adresse</td>
-            <td>Actions</td>
+            <th>Id</th>
+            <th>Nom du magasin</th>
+            <th>Adresse</th>
+            <th>Actions</th>
         </tr>
+        </thead>
+        <tbody>
         {% for store in stores %}
             <tr>
                 <td>{{ store.id }}</td>
@@ -18,7 +21,7 @@
                 <td>{{ store.adress }}</td>
                 <td>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown"
+                        <button type="button" class="btn btn-sm btn_action dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             Action <span class="caret"></span>
                         </button>
@@ -33,6 +36,7 @@
                 </td>
             </tr>
         {% endfor %}
+        </tbody>
     </table>
 
 {% endblock %}

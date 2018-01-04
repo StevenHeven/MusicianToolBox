@@ -29,7 +29,7 @@ class OfferAdminController extends Controller
     /**
      * @Route("/", name="offer.index")
      */
-    //Methode qui liste toutes les petites annonces
+    //Methode qui liste toutes les
     public function indexAction()
     {
         $repository= $this->getDoctrine()->getRepository(Offer::class);
@@ -45,7 +45,7 @@ class OfferAdminController extends Controller
     //methode qui modifie une petite annonce
     public function editAction($id, Request $request){
 
-        $offer= $this->getDoctrine()->getRepository(Offer::class)->find($id);
+        $offer= $this->getDoctrine()->getRepository(Offer::class)->findWithPictures($id);;
 
         $form1= $this->createForm(OfferAdminType::class, $offer);
         $form1->handleRequest($request);

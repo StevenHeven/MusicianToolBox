@@ -5,13 +5,16 @@
     <p>Voici toutes les salles de concert enregistrées dans notre BDD : </p>
 
     <br>
-    <table class="table table-striped text-center">
+    <table id="table_admin" class="table table-striped text-center display">
+        <thead>
         <tr class="listTd">
-            <td>Id</td>
-            <td>Nom de la salle</td>
-            <td>Type</td>
-            <td>Actions</td>
+            <th>Id</th>
+            <th>Nom de la salle</th>
+            <th>Type</th>
+            <th>Actions</th>
         </tr>
+        </thead>
+        <tbody>
         {% for liveroom in liverooms %}
             <tr>
                 <td>{{ liveroom.id }}</td>
@@ -19,7 +22,7 @@
                 <td>{{ liveroom.type }}</td>
                 <td>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown"
+                        <button type="button" class="btn btn-sm btn_action dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             Action <span class="caret"></span>
                         </button>
@@ -34,6 +37,7 @@
                 </td>
             </tr>
         {% endfor %}
+        </tbody>
     </table>
 
 {% endblock %}

@@ -4,23 +4,26 @@
 
     <p>Voici toutes les concerts enregistrées dans notre BDD : </p>
     <br>
-    <table class="table table-striped text-center">
+    <table id="table_admin" class="table table-striped text-center display">
+        <thead>
         <tr class="listTd">
-            <td>Id</td>
-            <td>Titre</td>
-            <td>Date</td>
-            <td>Salle</td>
-            <td>Actions</td>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Date</th>
+            <th>Salle</th>
+            <th>Actions</th>
         </tr>
+        </thead>
+        <tbody>
         {% for concert in concerts %}
             <tr>
                 <td>{{ concert.id }}</td>
-                <td>{{ concert.title }}</td>
+                <td>{{ concert.name }}</td>
                 <td>{{ concert.date }}</td>
                 <td>{{ concert.liveroom }}</td>
                 <td>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown"
+                        <button type="button" class="btn btn-sm btn_action dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             Action <span class="caret"></span>
                         </button>
@@ -35,6 +38,7 @@
                 </td>
             </tr>
         {% endfor %}
+        </tbody>
     </table>
 
 {% endblock %}
