@@ -9,8 +9,8 @@
 namespace AdminBundle\Controller;
 
 
+use AdminBundle\Form\OfferAdminType;
 use AppBundle\Entity\Offer;
-use AppBundle\Form\OfferType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Config\Definition\Exception\Exception;
@@ -29,7 +29,7 @@ class OfferAdminController extends Controller
     /**
      * @Route("/", name="offer.index")
      */
-    //Methode qui liste toutes les magasins
+    //Methode qui liste toutes les petites annonces
     public function indexAction()
     {
         $repository= $this->getDoctrine()->getRepository(Offer::class);
@@ -47,7 +47,7 @@ class OfferAdminController extends Controller
 
         $offer= $this->getDoctrine()->getRepository(Offer::class)->find($id);
 
-        $form1= $this->createForm(OfferType::class, $offer);
+        $form1= $this->createForm(OfferAdminType::class, $offer);
         $form1->handleRequest($request);
 
         if ($form1->isValid()) {

@@ -2,21 +2,20 @@
 
 {% block content %}
 
-    <p>Voici toutes les salles de concert enregistrées dans notre BDD : </p>
-
+    <p>Voici toutes les styles de musicien enregistrées dans notre BDD : </p>
     <br>
+    <a class="btn btn-warning btn_add_musicianCategory" href="{{ path("addMusicianCategory") }}">Ajouter style de musicien</a>
+
     <table class="table table-striped text-center">
         <tr class="listTd">
             <td>Id</td>
-            <td>Nom de la salle</td>
-            <td>Type</td>
+            <td>Nom</td>
             <td>Actions</td>
         </tr>
-        {% for liveroom in liverooms %}
+        {% for musicianCategory in musicianCategories %}
             <tr>
-                <td>{{ liveroom.id }}</td>
-                <td>{{ liveroom.name }}</td>
-                <td>{{ liveroom.type }}</td>
+                <td>{{ musicianCategory.id }}</td>
+                <td>{{ musicianCategory.label }}</td>
                 <td>
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-warning dropdown-toggle" data-toggle="dropdown"
@@ -24,9 +23,9 @@
                             Action <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu ">
-                            <li><a href="{{ path("editLiveroom", {"id": liveroom.id}) }}"><i
+                            <li><a href="{{ path("editMusicianCategory", {"id": musicianCategory.id}) }}"><i
                                             class="glyphicon glyphicon-pencil"></i> &nbsp;Editer</a></li>
-                            <li><a href="{{ path("deleteLiveRoom", {"id": liveroom.id}) }}"><i
+                            <li><a href="{{ path("deleteMusicianCategory", {"id": musicianCategory.id}) }}"><i
                                             class="glyphicon glyphicon-remove"></i> &nbsp;Supprimer</a></li>
 
                         </ul>

@@ -19,7 +19,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.jpg') }}" />
 
-
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Dosis:400,500,600,700' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Cantarell|Germania+One" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,13 +36,16 @@
     <div class="header clearfix">
         <nav>
             <ul class="nav nav-pills pull-right">
-                <li {% if app.request.get('_route') is same as('liveroom.index') %}class="active"{% endif %}role="presentation"><a href="{{ path('liveroom.index') }}">Salles de concert</a></li>
-                <li {% if app.request.get('_route') is same as('store.index') %}class="active"{% endif %}role="presentation"><a href="{{ path('store.index') }}">Magasins</a></li>
-                <li {% if app.request.get('_route') is same as('offer.index') %}class="active"{% endif %}role="presentation"><a href="{{ path('offer.index') }}">Petites Annonces</a></li>
-                <li {% if app.request.get('_route') is same as('concert.index') %}class="active"{% endif %}role="presentation"><a href="#">Concerts</a></li>
+                <li {% if app.request.get('_route') is same as('liveroom.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('liveroom.index') }}">Salles de concert</a></li>
+                <li {% if app.request.get('_route') is same as('store.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('store.index') }}">Magasins</a></li>
+                <li {% if app.request.get('_route') is same as('offer.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('offer.index') }}">Petites Annonces</a></li>
+                <li {% if app.request.get('_route') is same as('concert.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('concert.index') }}">Concerts</a></li>
+                <li {% if app.request.get('_route') is same as('instrument.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('instrument.index') }}">Instruments</a></li>
+                <li {% if app.request.get('_route') is same as('musicCategory.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('musicCategory.index') }}">Style</a></li>
+                <li {% if app.request.get('_route') is same as('musicianCategory.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('musicianCategory.index') }}">Musiciens</a></li>
             </ul>
         </nav>
-        <img class="logo" src="{{ asset('img/Logo.svg') }}"> <h3 class="text-muted">MTB ADMIN</h3>
+        <img class="logo" src="{{ asset('img/Logo_2-white.svg') }}"> <h3 class="text-muted">MTB ADMIN</h3>
     </div>
 
     <div class="row marketing">
