@@ -44,10 +44,6 @@ class Image
      */
     private $offer;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Concert", inversedBy="image")
-     */
-    private $concert;
 
     public function __construct()
     {
@@ -56,9 +52,6 @@ class Image
 
         if ($offer !== null) {
             $this->setOffer($offer);
-        }
-        else if ($concert !== null) {
-            $this->setConcert($concert);
         }
     }
     /**

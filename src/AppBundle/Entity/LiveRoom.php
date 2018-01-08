@@ -64,7 +64,7 @@ class LiveRoom
      */
     private $price;
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Concert", inversedBy="liveroom")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Concert", mappedBy="liveroom", cascade={"persist"})
      */
     private $concerts;
     /**

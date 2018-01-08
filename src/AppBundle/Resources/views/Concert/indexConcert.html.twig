@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <p class="germania text-uppercase text-center titleLiveRoom">Toutes les Concerts</p>
-                <a href="{{ path('addConcert') }}" class="btn btn-primary btn-danger add_liveRoom germania"><span class="glyphicon glyphicon-plus"></span> Ajouter un événment </a>
+                <a href="{{ path('addConcert') }}" class="btn btn-primary btn-danger add_liveRoom germania"><span class="glyphicon glyphicon-plus"></span> Ajouter un événement </a>
             </div>
         </div>
 
@@ -40,7 +40,7 @@
                             </p>
                         </div>
                         <p class="adress cantarell text-uppercase"><i
-                                    class="glyphicon glyphicon-map-marker icon"></i> {{ concert.liveroom }}</p>
+                                    class="glyphicon glyphicon-map-marker icon"></i> {{ concert.liveroom.name }}
                         <p class="price"><span class="germania">Prix de l'entrée :</span><span
                                     class="cantarell"> {% if concert.price == 0 %}
                                     Gratuit{% endif %}

@@ -88,7 +88,6 @@ class Offer
         $this->image= new ArrayCollection();
     }
 
-
     /**
      * Set title
      *

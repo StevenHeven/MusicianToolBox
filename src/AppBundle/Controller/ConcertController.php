@@ -27,7 +27,7 @@ class ConcertController extends Controller
     /**
      * @Route("/index", name="indexConcert")
      */
-    public function indexRoomAction(){
+    public function indexConcertAction(){
         $repository= $this->getDoctrine()->getRepository(Concert::class);
         $concerts= $repository->findAll();                                  //SELECT * from concert
 
@@ -37,19 +37,15 @@ class ConcertController extends Controller
     /**
      * @Route("/addConcert", name="addConcert")
      */
-    public function addRoomAction(Request $request){
+    public function addConcertAction(Request $request){
         $concert = new Concert();
-
-        $concert->addImage(new Image($concert));
 
         $form= $this->createForm(ConcertType::class, $concert);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
-            $liveroom= $form->get('liveroom')->getData();
             $em= $this->getDoctrine()->getManager();
-            $concert->addLiveroom($liveroom);
-            $em->persist($form->getData());
+            $em->persist($concert);
             $em->flush();
 
             return $this->redirectToRoute("indexConcert");

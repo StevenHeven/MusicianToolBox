@@ -30,7 +30,7 @@ class Concert
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\LiveRoom", mappedBy="concerts", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\LiveRoom", inversedBy="concerts")
      */
     private $liveroom;
 
@@ -79,9 +79,10 @@ class Concert
     public function __construct()
     {
         $this->style = new ArrayCollection();
-        $this->liveroom = new ArrayCollection();
         $this->image= new ArrayCollection();
     }
+
+
 
     /**
      * Set name
@@ -156,84 +157,6 @@ class Concert
     }
 
     /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Add liveroom
-     *
-     * @param \AppBundle\Entity\LiveRoom $liveroom
-     *
-     * @return Concert
-     */
-    public function addLiveroom(\AppBundle\Entity\LiveRoom $liveroom)
-    {
-        $this->liveroom[] = $liveroom;
-
-        return $this;
-    }
-
-    /**
-     * Remove liveroom
-     *
-     * @param \AppBundle\Entity\LiveRoom $liveroom
-     */
-    public function removeLiveroom(\AppBundle\Entity\LiveRoom $liveroom)
-    {
-        $this->liveroom->removeElement($liveroom);
-    }
-
-    /**
-     * Get liveroom
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getLiveroom()
-    {
-        return $this->liveroom;
-    }
-
-    /**
-     * Add style
-     *
-     * @param \AppBundle\Entity\MusicCategory $style
-     *
-     * @return Concert
-     */
-    public function addStyle(\AppBundle\Entity\MusicCategory $style)
-    {
-        $this->style[] = $style;
-
-        return $this;
-    }
-
-    /**
-     * Remove style
-     *
-     * @param \AppBundle\Entity\MusicCategory $style
-     */
-    public function removeStyle(\AppBundle\Entity\MusicCategory $style)
-    {
-        $this->style->removeElement($style);
-    }
-
-    /**
-     * Get style
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getStyle()
-    {
-        return $this->style;
-    }
-
-    /**
      * Set date
      *
      * @param \DateTime $date
@@ -255,40 +178,6 @@ class Concert
     public function getDate()
     {
         return $this->date;
-    }
-
-    /**
-     * Add image
-     *
-     * @param \AppBundle\Entity\Image $image
-     *
-     * @return Concert
-     */
-    public function addImage(\AppBundle\Entity\Image $image)
-    {
-        $this->image[] = $image;
-
-        return $this;
-    }
-
-    /**
-     * Remove image
-     *
-     * @param \AppBundle\Entity\Image $image
-     */
-    public function removeImage(\AppBundle\Entity\Image $image)
-    {
-        $this->image->removeElement($image);
-    }
-
-    /**
-     * Get image
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getImage()
-    {
-        return $this->image;
     }
 
     /**
@@ -337,5 +226,107 @@ class Concert
     public function getFacebook()
     {
         return $this->facebook;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set liveroom
+     *
+     * @param \AppBundle\Entity\LiveRoom $liveroom
+     *
+     * @return Concert
+     */
+    public function setLiveroom(\AppBundle\Entity\LiveRoom $liveroom = null)
+    {
+        $this->liveroom = $liveroom;
+
+        return $this;
+    }
+
+    /**
+     * Get liveroom
+     *
+     * @return \AppBundle\Entity\LiveRoom
+     */
+    public function getLiveroom()
+    {
+        return $this->liveroom;
+    }
+
+    /**
+     * Add style
+     *
+     * @param \AppBundle\Entity\MusicCategory $style
+     *
+     * @return Concert
+     */
+    public function addStyle(\AppBundle\Entity\MusicCategory $style)
+    {
+        $this->style[] = $style;
+
+        return $this;
+    }
+
+    /**
+     * Remove style
+     *
+     * @param \AppBundle\Entity\MusicCategory $style
+     */
+    public function removeStyle(\AppBundle\Entity\MusicCategory $style)
+    {
+        $this->style->removeElement($style);
+    }
+
+    /**
+     * Get style
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getStyle()
+    {
+        return $this->style;
+    }
+
+    /**
+     * Add image
+     *
+     * @param \AppBundle\Entity\Image $image
+     *
+     * @return Concert
+     */
+    public function addImage(\AppBundle\Entity\Image $image)
+    {
+        $this->image[] = $image;
+
+        return $this;
+    }
+
+    /**
+     * Remove image
+     *
+     * @param \AppBundle\Entity\Image $image
+     */
+    public function removeImage(\AppBundle\Entity\Image $image)
+    {
+        $this->image->removeElement($image);
+    }
+
+    /**
+     * Get image
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

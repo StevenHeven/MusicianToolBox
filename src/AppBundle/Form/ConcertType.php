@@ -5,6 +5,7 @@ namespace AppBundle\Form;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -30,12 +31,16 @@ class ConcertType extends AbstractType
             ->add('website', TextType::class ,['label' => 'URL', 'required' => false])
             ->add('facebook', TextType::class,['label' => 'Evénement Facebook', 'required' => false])
             ->add('description', TextareaType::class, ['label' => 'Description','attr' =>['rows' => 10]])
-            ->add('liveroom', EntityType::class, ['class' => 'AppBundle\Entity\LiveRoom','choice_label' => 'name', 'label' => 'Salle de concert', "mapped"=> false])
-            ->add('image', FileType::class, [
-                    'required' => false,
-                    'data_class' => null,
-                    'label' => 'Photos']
-              )
+            ->add('liveroom', EntityType::class, [
+                'class' => 'AppBundle\Entity\LiveRoom',
+                'choice_label' => 'name',
+                'label' => 'Salle de concert'])
+            ->add('image', CollectionType::class, [
+                'required' => false,
+                'entry_type' => ImageType::class,
+                'by_reference'=> false,
+                'label' => 'Photos (une annonce sera plus visible avec photos !',
+                'label_attr' => ['class' => 'form_photos']])
             ->add('submit', SubmitType::class, ['label' => 'Envoyer']);;
 
     }
