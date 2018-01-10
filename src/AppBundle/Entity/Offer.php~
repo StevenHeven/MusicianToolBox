@@ -76,8 +76,8 @@ class Offer
     private $instrument;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Image", mappedBy="offer", cascade={"persist"})
-     * @ORM\JoinColumn(onDelete="SET NULL")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Image", mappedBy="offer")
+     * @ORM\JoinColumn(onDelete="RESTRICT")
      */
     private $image;
 
@@ -86,7 +86,6 @@ class Offer
         $this->style= new ArrayCollection();
         $this->musician= new ArrayCollection();
         $this->instrument= new ArrayCollection();
-        $this->image= new ArrayCollection();
     }
 
 
@@ -393,29 +392,5 @@ class Offer
     public function getImage()
     {
         return $this->image;
-    }
-
-    /**
-     * Add image
-     *
-     * @param \AppBundle\Entity\Image $image
-     *
-     * @return Offer
-     */
-    public function addImage(\AppBundle\Entity\Image $image)
-    {
-        $this->image[] = $image;
-
-        return $this;
-    }
-
-    /**
-     * Remove image
-     *
-     * @param \AppBundle\Entity\Image $image
-     */
-    public function removeImage(\AppBundle\Entity\Image $image)
-    {
-        $this->image->removeElement($image);
     }
 }

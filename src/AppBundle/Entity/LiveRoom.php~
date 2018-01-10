@@ -45,28 +45,26 @@ class LiveRoom
     private $type;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="integer")
      */
     private $capacity;
 
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="string")
      */
     private $website;
 
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="string")
      */
     private $facebook;
 
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="string")
      */
     private $price;
-    /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Concert", inversedBy="liveroom")
-     */
-    private $concerts;
+
+
     /**
      * Set name
      *
@@ -243,29 +241,5 @@ class LiveRoom
     public function getType()
     {
         return $this->type;
-    }
-
-    /**
-     * Set facebook
-     *
-     * @param string $facebook
-     *
-     * @return LiveRoom
-     */
-    public function setFacebook($facebook)
-    {
-        $this->facebook = $facebook;
-
-        return $this;
-    }
-
-    /**
-     * Get facebook
-     *
-     * @return string
-     */
-    public function getFacebook()
-    {
-        return $this->facebook;
     }
 }

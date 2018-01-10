@@ -38,7 +38,6 @@ class OfferAdminController extends Controller
         return $this->render('@Admin/OfferAdmin/offerAdmin.html.twig', ["offers" => $offers]);
 
     }
-
     /**
      * @Route("/edit/{id}", name="editOffer")
      */

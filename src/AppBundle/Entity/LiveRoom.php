@@ -63,10 +63,8 @@ class LiveRoom
      * @ORM\Column(type="string", nullable=true)
      */
     private $price;
-    /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Concert", mappedBy="liveroom", cascade={"persist"})
-     */
-    private $concerts;
+
+
     /**
      * Set name
      *
@@ -267,29 +265,5 @@ class LiveRoom
     public function getFacebook()
     {
         return $this->facebook;
-    }
-
-    /**
-     * Set concerts
-     *
-     * @param \AppBundle\Entity\Concert $concerts
-     *
-     * @return LiveRoom
-     */
-    public function setConcerts(\AppBundle\Entity\Concert $concerts = null)
-    {
-        $this->concerts = $concerts;
-
-        return $this;
-    }
-
-    /**
-     * Get concerts
-     *
-     * @return \AppBundle\Entity\Concert
-     */
-    public function getConcerts()
-    {
-        return $this->concerts;
     }
 }

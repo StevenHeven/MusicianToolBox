@@ -44,12 +44,8 @@ class Image
      */
     private $offer;
 
-
-    public function __construct()
+    public function __construct(Offer $offer = null)
     {
-        $offer = new Offer();
-        $concert = new Concert();
-
         if ($offer !== null) {
             $this->setOffer($offer);
         }
@@ -238,29 +234,5 @@ class Image
     public function getOffer()
     {
         return $this->offer;
-    }
-
-    /**
-     * Set concert
-     *
-     * @param \AppBundle\Entity\Concert $concert
-     *
-     * @return Image
-     */
-    public function setConcert(\AppBundle\Entity\Concert $concert = null)
-    {
-        $this->concert = $concert;
-
-        return $this;
-    }
-
-    /**
-     * Get concert
-     *
-     * @return \AppBundle\Entity\Concert
-     */
-    public function getConcert()
-    {
-        return $this->concert;
     }
 }

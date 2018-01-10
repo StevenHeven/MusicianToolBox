@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="ImageRepository")
  * @ORM\Table(name="Image")
  * @ORM\HasLifecycleCallbacks
  */
@@ -44,17 +44,6 @@ class Image
      */
     private $offer;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Concert", inversedBy="image")
-     */
-    private $concert;
-
-    public function __construct(Offer $offer = null)
-    {
-        if ($offer !== null) {
-            $this->setOffer($offer);
-        }
-    }
     /**
      * Set url
      *
@@ -142,9 +131,6 @@ class Image
     {
         // Si jamais il n'y a pas de fichier, on ne fait rien
         if (null === $this->file) {
-            $this->url = 'url';
-            $this->alt = 'alt';
-
             return;
         }
 
@@ -215,29 +201,5 @@ class Image
 
     public function getWebPath(){
         return $this->getUploadDir().'/'.$this->getId().'.'.$this->getUrl();
-    }
-
-    /**
-     * Set offer
-     *
-     * @param \AppBundle\Entity\Offer $offer
-     *
-     * @return Image
-     */
-    public function setOffer(\AppBundle\Entity\Offer $offer = null)
-    {
-        $this->offer = $offer;
-
-        return $this;
-    }
-
-    /**
-     * Get offer
-     *
-     * @return \AppBundle\Entity\Offer
-     */
-    public function getOffer()
-    {
-        return $this->offer;
     }
 }

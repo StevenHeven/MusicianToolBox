@@ -76,7 +76,8 @@ class Offer
     private $instrument;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Image", mappedBy="offer", cascade={"remove"})
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Image", mappedBy="offer", cascade={"persist"})
+     * @ORM\JoinColumn(onDelete="RESTRICT")
      */
     private $image;
 
@@ -87,6 +88,7 @@ class Offer
         $this->instrument= new ArrayCollection();
         $this->image= new ArrayCollection();
     }
+
 
     /**
      * Set title
@@ -386,7 +388,7 @@ class Offer
     /**
      * Get image
      *
-     * @return ArrayCollection
+     * @return \AppBundle\Entity\Image
      */
     public function getImage()
     {
