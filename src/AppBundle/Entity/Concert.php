@@ -1,22 +1,24 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Steven Dev17
- * Date: 04/10/2017
- * Time: 09:45
+ * User: Steven
+ * Date: 11/12/2017
+ * Time: 19:37
  */
 
 namespace AppBundle\Entity;
 
+
 use AppBundle\Traits\Id;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity()
- * @ORM\Table(name="LiveRoom")
+ * @ORM\Table(name="Concert")
  */
-class LiveRoom
+class Concert
 {
 
     use Id;
@@ -28,26 +30,27 @@ class LiveRoom
     private $name;
 
     /**
-     * @ORM\Column(type="text")
-     * @Assert\NotBlank()
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\LiveRoom", inversedBy="concerts", cascade={"persist"})
      */
-    private $description;
+    private $liveroom;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
      */
-    private $adresse;
+    private $description;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="integer", length=255)
+     * @Assert\NotBlank()
      */
-    private $type;
+    private $price;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="datetime")
+     * @Assert\NotBlank()
      */
-    private $capacity;
+    private $date;
 
     /**
      * @ORM\Column(type="string", nullable=true)
@@ -60,13 +63,9 @@ class LiveRoom
     private $facebook;
 
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\MusicCategory", cascade={"persist"}, fetch="EAGER")
      */
-    private $price;
-    /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Concert", mappedBy="liveroom")
-     */
-    private $concerts;
+    private $style;
 
 
     /**
@@ -74,15 +73,18 @@ class LiveRoom
      */
     public function __construct()
     {
-        $this->concerts = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->style = new ArrayCollection();
+        $this->liveroom = new ArrayCollection();
     }
+
+
 
     /**
      * Set name
      *
      * @param string $name
      *
-     * @return LiveRoom
+     * @return Concert
      */
     public function setName($name)
     {
@@ -106,7 +108,7 @@ class LiveRoom
      *
      * @param string $description
      *
-     * @return LiveRoom
+     * @return Concert
      */
     public function setDescription($description)
     {
@@ -126,75 +128,51 @@ class LiveRoom
     }
 
     /**
-     * Set adresse
+     * Set price
      *
-     * @param string $adresse
+     * @param integer $price
      *
-     * @return LiveRoom
+     * @return Concert
      */
-    public function setAdresse($adresse)
+    public function setPrice($price)
     {
-        $this->adresse = $adresse;
+        $this->price = $price;
 
         return $this;
     }
 
     /**
-     * Get adresse
-     *
-     * @return string
-     */
-    public function getAdresse()
-    {
-        return $this->adresse;
-    }
-
-    /**
-     * Set type
-     *
-     * @param string $type
-     *
-     * @return LiveRoom
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * Set capacity
-     *
-     * @param integer $capacity
-     *
-     * @return LiveRoom
-     */
-    public function setCapacity($capacity)
-    {
-        $this->capacity = $capacity;
-
-        return $this;
-    }
-
-    /**
-     * Get capacity
+     * Get price
      *
      * @return integer
      */
-    public function getCapacity()
+    public function getPrice()
     {
-        return $this->capacity;
+        return $this->price;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Concert
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
     }
 
     /**
@@ -202,7 +180,7 @@ class LiveRoom
      *
      * @param string $website
      *
-     * @return LiveRoom
+     * @return Concert
      */
     public function setWebsite($website)
     {
@@ -226,7 +204,7 @@ class LiveRoom
      *
      * @param string $facebook
      *
-     * @return LiveRoom
+     * @return Concert
      */
     public function setFacebook($facebook)
     {
@@ -246,30 +224,6 @@ class LiveRoom
     }
 
     /**
-     * Set price
-     *
-     * @param string $price
-     *
-     * @return LiveRoom
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return string
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
      * Get id
      *
      * @return integer
@@ -280,36 +234,60 @@ class LiveRoom
     }
 
     /**
-     * Add concert
+     * Set liveroom
      *
-     * @param \AppBundle\Entity\Concert $concert
+     * @param \AppBundle\Entity\LiveRoom $liveroom
      *
-     * @return LiveRoom
+     * @return Concert
      */
-    public function addConcert(\AppBundle\Entity\Concert $concert)
+    public function setLiveroom(\AppBundle\Entity\LiveRoom $liveroom = null)
     {
-        $this->concerts[] = $concert;
+        $this->liveroom = $liveroom;
 
         return $this;
     }
 
     /**
-     * Remove concert
+     * Get liveroom
      *
-     * @param \AppBundle\Entity\Concert $concert
+     * @return \AppBundle\Entity\LiveRoom
      */
-    public function removeConcert(\AppBundle\Entity\Concert $concert)
+    public function getLiveroom()
     {
-        $this->concerts->removeElement($concert);
+        return $this->liveroom;
     }
 
     /**
-     * Get concerts
+     * Add style
+     *
+     * @param \AppBundle\Entity\MusicCategory $style
+     *
+     * @return Concert
+     */
+    public function addStyle(\AppBundle\Entity\MusicCategory $style)
+    {
+        $this->style[] = $style;
+
+        return $this;
+    }
+
+    /**
+     * Remove style
+     *
+     * @param \AppBundle\Entity\MusicCategory $style
+     */
+    public function removeStyle(\AppBundle\Entity\MusicCategory $style)
+    {
+        $this->style->removeElement($style);
+    }
+
+    /**
+     * Get style
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getConcerts()
+    public function getStyle()
     {
-        return $this->concerts;
+        return $this->style;
     }
 }

@@ -1,1 +1,144 @@
 {% extends "::base.html.twig" %}
+
+{% block content %}
+
+    <!--Slider Section Start-->
+    <div class="slider">
+        <div id="first-slider">
+            <div id="carousel-example-generic_perso" class="carousel slide carousel-fade">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- Item 1 -->
+                    <div class="item active slide1">
+                        <div class="row">
+                            <div class="container">
+                                <div class="text-slide text-left col-lg-10">
+                                    <p>Tu cherches un bon plan pour une salle ou un bar pour jouer, ou alors tu connais un bon plan ? <br> Viens voir les salles de concert</p>
+                                </div>
+                                <a class="discover carousel-control" href="{{ path('indexLiveRoom') }}" role="button"
+                                   data-slide="discover">
+                                    <span class="discover btn_1">Salles de concert</span> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="item slide2">
+                        <div class="row">
+                            <div class="container">
+                                <div class="text-slide text-left col-lg-10">
+                                    <p>Tu veux racheter du bon matos mais tu sais pas où ? Ou tu connais un super magasin ? <br> Viens voir les magasins</p>
+                                </div>
+                                <a class="discover carousel-control" href="{{ path('indexStore') }}" role="button"
+                                   data-slide="discover">
+                                    <span class="discover btn_2">Magasins</span> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="item slide3">
+                        <div class="row">
+                            <div class="container">
+                                <div class="text-slide text-left col-lg-10">
+                                    <p>Tu as du matos en trop et tu veux le vendre ? Ou tu cherches des musiciens pour ton groupe ou tu donnes cours ? <br> Viens voir les petites annonces</p>
+                                </div>
+                                <a class="discover carousel-control" href="{{ path('indexOffer') }}" role="button"
+                                   data-slide="discover">
+                                    <span class="discover btn_3">Petites annonces</span> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="item slide4">
+                        <div class="row">
+                            <div class="container">
+                                <div class="text-slide text-left col-lg-10">
+                                    <p>Tu veux faire la promo de ton concert ou tu cherche un concert à voir ? <br> Viens voir les concerts</p>
+                                </div>
+                                <a class="discover carousel-control" href="{{ path("indexConcert") }}" role="button"
+                                   data-slide="discover">
+                                    <span class="discover btn_4">Concert</span> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="item slide5">
+                        <div class="row">
+                            <div class="container">
+                                <div class="text-slide text-left col-lg-10">
+                                    <p>Tu veux partager ta musique, discuter et rencontrer d'autres musiciens ? Viens sur le MTB Social</p>
+                                </div>
+                                <a class="discover carousel-control" href="{{ path('indexSocial') }}" role="button"
+                                   data-slide="discover">
+                                    <span class="discover btn_5">MTB Social</span> </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Item -->
+
+                </div>
+                <!-- End Wrapper for slides-->
+                <a class="left carousel-control" href="#carousel-example-generic_perso" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic_perso" role="button" data-slide="next">
+                    <i class="fa fa-angle-right"></i><span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Slider Section End-->
+
+    <div class="row lign-presentation">
+        <p>Qu'est-ce que MusicianToolBox ?</p>
+    </div>
+    <div class="row lign-blocks">
+        <div class="col-lg-3 blocks4 block1">
+            <div class="thumbnail">
+                <img src="{{ asset('img/photos/Block_Concert.jpg') }}">
+                <div class="caption">
+                    <h3>Savoir où jouer</h3>
+                    <p>C'est un endroit où tu peux retrouver les bons plans pour trouver où jouer !
+                        Les bonnes salles de concerts ou les bars où y'a une super ambiance pour se produire, c'est ici que chacun peut
+                        donner son bon plan et tu sauras où sont les meilleurs endroit où tu peux jouer </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 blocks4 block2">
+            <div class="thumbnail">
+                <img src="{{ asset('img/photos/Block_Store.jpg') }}">
+                <div class="caption">
+                    <h3>Savoir où se réapprovisionner</h3>
+                    <p>C'est un endroit où tu peux retrouver les bons plans pour trouver des magasins pour du nouveau matos!
+                       Tu cherches une nouvelle gratte ? Une nouvelle table de mixage ? Des lights ? Tu peux savoir tous les bons magasins qui sont
+                        à côté de chez toi grâce à d'autre musiciens qui connaissent les bons plans.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 blocks4 block3">
+            <div class="thumbnail">
+                <img src="{{ asset('img/photos/Block_Offer.jpg') }}">
+                <div class="caption">
+                    <h3>Trouver/vendre du matos, mais pas que ...</h3>
+                    <p>C'est un endroit où tu peux retrouver pleins de bonnes occaz pour du matos mais aussi pour trouver des musiciens pour ton nouveau groupe
+                        ou pour des cours et même pour savoir si y'a des endroits pour répéter!
+                        En effet, il y a les petites annonces où tu peux chercher ou poster les tiennes afin de te débarrasser de matos ou vendre tes services (cours, studio,...)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 blocks4 block4">
+            <div class="thumbnail">
+                <img src="{{ asset('img/photos/Block_Social.jpg') }}">
+                <div class="caption">
+                    <h3>Se créer un réseau artistique</h3>
+                    <p>C'est un endroit où tu peux retrouver d'autres musiciens et donc te constituer un réseau ! Tu pourras alors partager ta musique, discuter et réagir avec d'autres zikos et
+                    ainsi avoir des contacts dans le monde musical</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

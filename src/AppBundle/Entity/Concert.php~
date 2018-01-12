@@ -1,0 +1,81 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Steven
+ * Date: 11/12/2017
+ * Time: 19:37
+ */
+
+namespace AppBundle\Entity;
+
+
+use AppBundle\Traits\Id;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="Concert")
+ */
+class Concert
+{
+
+    use Id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $name;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\LiveRoom", inversedBy="concerts", cascade={"persist"})
+     */
+    private $liveroom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $description;
+
+    /**
+     * @ORM\Column(type="integer", length=255)
+     * @Assert\NotBlank()
+     */
+    private $price;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @Assert\NotBlank()
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $website;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $facebook;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\MusicCategory", cascade={"persist"}, fetch="EAGER")
+     */
+    private $style;
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->style = new ArrayCollection();
+        $this->liveroom = new ArrayCollection();
+    }
+
+
+}

@@ -46,8 +46,8 @@
                         <li class="dropdown {% if app.request.get('_route') is same as('indexConcert') %}current{% endif %}">
                             <a class="dropdown-toggle" data-toggle="dropdown">Concert <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Les Concerts</a></li>
-                                <li><a href="#">Faire un événement</a></li>
+                                <li><a href="{{ path('indexConcert') }}">Les Concerts</a></li>
+                                <li><a href="{{ path('addConcert') }}">Faire un événement</a></li>
                             </ul>
                         </li>
                         <li><a href="{{ path('indexSocial') }}">Social</a></li>
