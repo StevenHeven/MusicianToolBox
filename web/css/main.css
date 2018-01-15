@@ -216,7 +216,7 @@ body.index:before, body.index:after {
     background-repeat: no-repeat;
 }
 
-.lign-presentation{
+.lign-presentation, .why_sentence{
     margin-top: 5%;
     font-size: 40px;
     color: white;
@@ -230,8 +230,12 @@ body.index:before, body.index:after {
 
 .blocks4 .thumbnail{
     background-color: #0f0f0f;
-    border: 1px double #db4a37;
+    border: 1px solid #db4a37;
     min-height: 490px;
+}
+
+.blocks4 .thumbnail img{
+    border-radius: 4px 4px 0 0;
 }
 
 .blocks4 .thumbnail .caption{
@@ -245,6 +249,42 @@ body.index:before, body.index:after {
 
 .blocks4 .thumbnail .caption p{
     font-family: "Cantarell", sans-serif;
+    text-align: center;
+}
+
+.lign_why{
+    background: #ad4f3b; /* Old browsers */
+    background: -moz-linear-gradient(top, #262626 0%, #ad4f3b 75%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #262626 0%,#ad4f3b 75%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,#262626 0%,#ad4f3b 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#ad4f3b',GradientType=0 ); /* IE6-9 */
+}
+
+/*.lign_why{*/
+    /*background: #42000c;*/
+/*}*/
+
+.why_sentence{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.photo_Of_Me{
+    width: 100%;
+    margin-right: 5%;
+}
+
+.text-presentation{
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', cursive;
+    font-weight: lighter;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.text-presentation img {
+    width: 60%;
 }
 
 .form-control {
