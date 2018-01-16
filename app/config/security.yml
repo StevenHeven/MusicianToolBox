@@ -29,3 +29,7 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/liveroom/addLiveRoom, role: ROLE_USER }
+        - { path: ^/store/addStore, role: ROLE_USER }
+        - { path: ^/offers/addOffer, role: ROLE_USER }
+        - { path: ^/concert/addConcert, role: ROLE_USER }

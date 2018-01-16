@@ -36,6 +36,11 @@ body.index:before, body.index:after {
     font-size: 18px;
 }
 
+.postedBy{
+    text-align: right;
+    margin-right: 7%;
+    padding-bottom: 2%;
+}
 /********************\
 /   BIG SLIDER STYLE   \
 \**********************/
@@ -388,6 +393,10 @@ body.index:before, body.index:after {
 #top-links li.register a .fa {
     margin-right: 10px;
 }
+#top-links li.userName_barre a .fa {
+    margin-right: 10px;
+}
+
 
 #top-links li.facebook a, #top-links li.twitter a,
 #top-links li.google-plus a, #top-links li.youtube a,
@@ -753,12 +762,12 @@ ul.nav > li {
     margin-left: 70.5%;
 }
 
-.add_store, .add_Offer {
+.add_store, .add_Offer, .add_Concert {
     margin-top: -47px;
     margin-left: 70.5%;
 }
 
-.oneLiveRoomContainer, .oneStoreContainer, .oneOfferContainer, .offer-content {
+.oneLiveRoomContainer, .oneStoreContainer, .oneOfferContainer, .offer-content , .oneConcertContainer{
     background-color: #000000;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -787,6 +796,11 @@ ul.nav > li {
 
 .description {
     line-height: 1.2;
+}
+
+.oneLiveRoomContainer .postedBy, .oneStoreContainer .postedBy, .oneConcertContainer .postedBy{
+    margin-right: 1%;
+    padding-bottom: 1%;
 }
 
 /*-------------------------------------------------------
@@ -972,11 +986,6 @@ ul.nav > li {
     width: 100%;
 }
 
-.postedBy{
-    text-align: right;
-    margin-right: 7%;
-    padding-bottom: 2%;
-}
 
 .userName{
     color: #db4a37;

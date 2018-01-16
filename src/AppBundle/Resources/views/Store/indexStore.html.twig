@@ -6,7 +6,9 @@
     <div class="row">
         <div class="col-lg-12">
             <p class="germania text-uppercase text-center titleStore">Tous les Magasins</p>
+           {% if app.user is not null %}
             <a href="{{ path('addStore') }}" class="btn btn-primary btn-danger add_store germania"><span class="glyphicon glyphicon-plus"></span> Ajouter un magasin </a>
+            {% endif %}
         </div>
     </div>
 
@@ -45,7 +47,7 @@
                                 class="cantarell"> {{ store.description }}</span></p>
                     {% if store.user != null %}
                         <div class="postedBy">
-                            Magasin publiée par <span class="userName">{{ store.user.username }}</span>
+                            Magasin ajouté par <span class="userName">{{ store.user.username }}</span>
                         </div>
                     {% endif %}
                 </div>

@@ -6,7 +6,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <p class="germania text-uppercase text-center titleLiveRoom">Toutes les Salles</p>
+                {% if app.user is not null %}
                 <a href="{{ path('addLiveRoom') }}" class="btn btn-primary btn-danger add_liveRoom germania"><span class="glyphicon glyphicon-plus"></span> Ajouter une salle </a>
+                {% endif %}
             </div>
         </div>
 

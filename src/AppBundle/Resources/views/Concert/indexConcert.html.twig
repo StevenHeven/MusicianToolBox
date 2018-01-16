@@ -6,7 +6,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <p class="germania text-uppercase text-center titleLiveRoom">Toutes les Concerts</p>
-                <a href="{{ path('addConcert') }}" class="btn btn-primary btn-danger add_liveRoom germania"><span class="glyphicon glyphicon-plus"></span> Ajouter un événement </a>
+    {% if app.user is not null %}
+                <a href="{{ path('addConcert') }}" class="btn btn-primary btn-danger add_Concert germania"><span class="glyphicon glyphicon-plus"></span> Ajouter un événement </a>
+        {% endif %}
             </div>
         </div>
 
@@ -25,7 +27,7 @@
         <div id="LiveRoomHolder">
             {% for concert in concerts %}
                 <div class="row liveroom">
-                    <div class="col-lg-11 oneLiveRoomContainer">
+                    <div class="col-lg-11 oneConcertContainer">
                         <div class="row">
                             <p class="col-lg-11 roomtitle">{{ concert.name }}</p>
                             <p class="col-lg-1">

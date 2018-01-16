@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+    <div class="storeContainer">
+    {% for user in users %}
+
+        <h1>Nom : {{ user.username }}</h1>
+        {{ dump(app) }}
+    {% endfor %}
+    </div>
+{% endblock %}
