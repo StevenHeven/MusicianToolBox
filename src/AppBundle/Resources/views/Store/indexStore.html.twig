@@ -43,6 +43,11 @@
                                 class="glyphicon glyphicon-map-marker icon"></i> {{ store.adress }}</p>
                     <p class="description"><span class="germania">Description :</span><br><span
                                 class="cantarell"> {{ store.description }}</span></p>
+                    {% if store.user != null %}
+                        <div class="postedBy">
+                            Magasin publiée par <span class="userName">{{ store.user.username }}</span>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

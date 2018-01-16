@@ -68,6 +68,10 @@ class LiveRoom
      */
     private $concerts;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist"})
+     */
+    private $user;
 
     /**
      * Constructor
@@ -311,5 +315,29 @@ class LiveRoom
     public function getConcerts()
     {
         return $this->concerts;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return LiveRoom
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

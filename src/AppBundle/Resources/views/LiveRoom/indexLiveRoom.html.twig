@@ -51,7 +51,13 @@
                                 {% if liveroom.price != 0 %}{{ liveroom.price }} € {% endif %}</span></p>
                         <p class="description"><span class="germania">Description :</span><br><span
                                     class="cantarell"> {{ liveroom.description }}</span></p>
+                        {% if liveroom.user != null %}
+                            <div class="postedBy">
+                                Salle publiée par <span class="userName">{{ liveroom.user.username }}</span>
+                            </div>
+                        {% endif %}
                     </div>
+
                 </div>
             {% endfor %}
         </div>

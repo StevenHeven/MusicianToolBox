@@ -36,6 +36,8 @@ class LiveRoomController extends Controller
     public function addRoomAction(Request $request){
         $room= new LiveRoom();
 
+        $room->setUser($this->getUser());
+
         $form= $this->createForm(LiveRoomType::class, $room);
         $form->handleRequest($request);
 

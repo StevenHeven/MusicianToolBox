@@ -42,14 +42,16 @@ class Store
      */
     private $facebook;
 
-
-
     /**
      * @ORM\Column(type="text")
      * @Assert\NotBlank()
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist"})
+     */
+    private $user;
 
     /**
      * Set name
@@ -155,5 +157,29 @@ class Store
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set facebook
+     *
+     * @param string $facebook
+     *
+     * @return Store
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
     }
 }

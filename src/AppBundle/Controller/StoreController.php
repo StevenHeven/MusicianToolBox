@@ -35,6 +35,7 @@ class StoreController extends Controller
      */
     public function addStoreAction(Request $request){
         $store= new Store();
+        $store->setUser($this->getUser());
 
         $form= $this->createForm(StoreType::class, $store);
         $form->handleRequest($request);

@@ -68,5 +68,252 @@ class LiveRoom
      */
     private $concerts;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist"})
+     */
+    private $user;
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->concerts = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return LiveRoom
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return LiveRoom
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     *
+     * @return LiveRoom
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     *
+     * @return LiveRoom
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set capacity
+     *
+     * @param integer $capacity
+     *
+     * @return LiveRoom
+     */
+    public function setCapacity($capacity)
+    {
+        $this->capacity = $capacity;
+
+        return $this;
+    }
+
+    /**
+     * Get capacity
+     *
+     * @return integer
+     */
+    public function getCapacity()
+    {
+        return $this->capacity;
+    }
+
+    /**
+     * Set website
+     *
+     * @param string $website
+     *
+     * @return LiveRoom
+     */
+    public function setWebsite($website)
+    {
+        $this->website = $website;
+
+        return $this;
+    }
+
+    /**
+     * Get website
+     *
+     * @return string
+     */
+    public function getWebsite()
+    {
+        return $this->website;
+    }
+
+    /**
+     * Set facebook
+     *
+     * @param string $facebook
+     *
+     * @return LiveRoom
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
+    }
+
+    /**
+     * Set price
+     *
+     * @param string $price
+     *
+     * @return LiveRoom
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return string
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Add concert
+     *
+     * @param \AppBundle\Entity\Concert $concert
+     *
+     * @return LiveRoom
+     */
+    public function addConcert(\AppBundle\Entity\Concert $concert)
+    {
+        $this->concerts[] = $concert;
+
+        return $this;
+    }
+
+    /**
+     * Remove concert
+     *
+     * @param \AppBundle\Entity\Concert $concert
+     */
+    public function removeConcert(\AppBundle\Entity\Concert $concert)
+    {
+        $this->concerts->removeElement($concert);
+    }
+
+    /**
+     * Get concerts
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getConcerts()
+    {
+        return $this->concerts;
+    }
 }
