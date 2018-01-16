@@ -22,13 +22,14 @@ class OfferRepository extends EntityRepository
 
     public function findWithPictures($id){
         $qb= $this->createQueryBuilder('offer')
-            ->select('offer', 'image', 'adress', 'category', 'style', 'musician', 'instrument')
+            ->select('offer', 'image', 'adress', 'category', 'style', 'musician', 'instrument', 'user')
             ->leftJoin('offer.image', 'image')
             ->leftJoin('offer.adress', 'adress')
             ->leftJoin('offer.category', 'category')
             ->leftJoin('offer.style', 'style')
             ->leftJoin('offer.musician', 'musician')
             ->leftJoin('offer.instrument', 'instrument')
+            ->leftJoin('offer.user', 'user')
             ->where('offer.id = :id')
             ->orderBy('image.id', 'ASC')
             ->setParameter('id', $id);

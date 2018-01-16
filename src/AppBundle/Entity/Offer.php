@@ -81,6 +81,11 @@ class Offer
      */
     private $image;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist"})
+     */
+    private $user;
+
     public function __construct()
     {
         $this->style= new ArrayCollection();
@@ -417,5 +422,29 @@ class Offer
     public function removeImage(\AppBundle\Entity\Image $image)
     {
         $this->image->removeElement($image);
+    }
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Offer
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

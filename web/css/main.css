@@ -972,6 +972,17 @@ ul.nav > li {
     width: 100%;
 }
 
+.postedBy{
+    text-align: right;
+    margin-right: 7%;
+    padding-bottom: 2%;
+}
+
+.userName{
+    color: #db4a37;
+    font-family: "Germania One", cursive;
+}
+
 /*-------------------------------------------------------
 	Footer Styles
 -------------------------------------------------------*/

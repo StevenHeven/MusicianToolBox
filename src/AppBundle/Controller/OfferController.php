@@ -38,6 +38,8 @@ class OfferController extends Controller
     public function addOfferAction(Request $request){
         $offer= new Offer();
 
+        $offer->setUser($this->getUser());
+
         $offer->addImage(new Image($offer));
         $offer->addImage(new Image($offer));
         $offer->addImage(new Image($offer));
