@@ -67,15 +67,4 @@ class Concert
      */
     private $style;
 
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->style = new ArrayCollection();
-        $this->liveroom = new ArrayCollection();
-    }
-
-
 }

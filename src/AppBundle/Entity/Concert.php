@@ -67,17 +67,13 @@ class Concert
      */
     private $style;
 
-
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->style = new ArrayCollection();
-        $this->liveroom = new ArrayCollection();
+        $this->style = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
-
 
     /**
      * Set name

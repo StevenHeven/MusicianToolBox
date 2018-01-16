@@ -73,13 +73,6 @@ class LiveRoom
      */
     private $user;
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->concerts = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Set name

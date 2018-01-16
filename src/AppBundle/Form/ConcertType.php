@@ -30,7 +30,7 @@ class ConcertType extends AbstractType
             ->add('website', TextType::class ,['label' => 'URL', 'required' => false])
             ->add('facebook', TextType::class,['label' => 'Evénement Facebook', 'required' => false])
             ->add('description', TextareaType::class, ['label' => 'Description','attr' =>['rows' => 10]])
-            ->add('liveroom', EntityType::class, ['class' => 'AppBundle\Entity\LiveRoom','choice_label' => 'name', 'label' => 'Salle de concert', "mapped"=> false])
+            ->add('liveroom', EntityType::class, ['class' => 'AppBundle\Entity\LiveRoom','choice_label' => 'name', 'label' => 'Salle de concert'])
             ->add('submit', SubmitType::class, ['label' => 'Envoyer']);;
 
     }

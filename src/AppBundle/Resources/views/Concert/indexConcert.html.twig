@@ -39,8 +39,11 @@
                                 {% endif %}
                             </p>
                         </div>
+                        {% if concert.liveroom != null %}
                         <p class="adress cantarell text-uppercase"><i
                                     class="glyphicon glyphicon-map-marker icon"></i> {{ concert.liveroom.name }}
+                        </p>
+                            {% endif %}
                         <p class="price"><span class="germania">Prix de l'entrée :</span><span
                                     class="cantarell"> {% if concert.price == 0 %}
                                     Gratuit{% endif %}
