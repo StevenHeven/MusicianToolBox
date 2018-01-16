@@ -67,4 +67,228 @@ class Concert
      */
     private $style;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist"})
+     */
+    private $user;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->style = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Concert
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Concert
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set price
+     *
+     * @param integer $price
+     *
+     * @return Concert
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return integer
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Concert
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set website
+     *
+     * @param string $website
+     *
+     * @return Concert
+     */
+    public function setWebsite($website)
+    {
+        $this->website = $website;
+
+        return $this;
+    }
+
+    /**
+     * Get website
+     *
+     * @return string
+     */
+    public function getWebsite()
+    {
+        return $this->website;
+    }
+
+    /**
+     * Set facebook
+     *
+     * @param string $facebook
+     *
+     * @return Concert
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set liveroom
+     *
+     * @param \AppBundle\Entity\LiveRoom $liveroom
+     *
+     * @return Concert
+     */
+    public function setLiveroom(\AppBundle\Entity\LiveRoom $liveroom = null)
+    {
+        $this->liveroom = $liveroom;
+
+        return $this;
+    }
+
+    /**
+     * Get liveroom
+     *
+     * @return \AppBundle\Entity\LiveRoom
+     */
+    public function getLiveroom()
+    {
+        return $this->liveroom;
+    }
+
+    /**
+     * Add style
+     *
+     * @param \AppBundle\Entity\MusicCategory $style
+     *
+     * @return Concert
+     */
+    public function addStyle(\AppBundle\Entity\MusicCategory $style)
+    {
+        $this->style[] = $style;
+
+        return $this;
+    }
+
+    /**
+     * Remove style
+     *
+     * @param \AppBundle\Entity\MusicCategory $style
+     */
+    public function removeStyle(\AppBundle\Entity\MusicCategory $style)
+    {
+        $this->style->removeElement($style);
+    }
+
+    /**
+     * Get style
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getStyle()
+    {
+        return $this->style;
+    }
 }

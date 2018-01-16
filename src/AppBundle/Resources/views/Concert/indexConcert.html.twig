@@ -48,6 +48,11 @@
                                     class="cantarell"> {% if concert.price == 0 %}
                                     Gratuit{% endif %}
                                 {% if concert.price != 0 %}{{ concert.price }} € {% endif %}</span></p>
+                        {% if concert.user != null %}
+                            <div class="postedBy">
+                                Concert ajouté par <span class="userName">{{ concert.user.username }}</span>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}

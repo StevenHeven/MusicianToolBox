@@ -68,6 +68,11 @@ class Concert
     private $style;
 
     /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist"})
+     */
+    private $user;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -285,5 +290,29 @@ class Concert
     public function getStyle()
     {
         return $this->style;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Concert
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

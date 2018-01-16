@@ -39,6 +39,7 @@ class ConcertController extends Controller
      */
     public function addRoomAction(Request $request){
         $concert = new Concert();
+        $concert->setUser($this->getUser());
 
         $form= $this->createForm(ConcertType::class, $concert);
         $form->handleRequest($request);
