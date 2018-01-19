@@ -41,6 +41,11 @@ body.index:before, body.index:after {
     margin-right: 7%;
     padding-bottom: 2%;
 }
+
+.userName{
+    color: #db4a37;
+    font-family: "Germania One", cursive;
+}
 /********************\
 /   BIG SLIDER STYLE   \
 \**********************/
@@ -737,7 +742,7 @@ ul.nav > li {
     font-size: 30px;
 }
 
-.liveRoomContainer, .storeContainer, .offerContainer, .socialContainer {
+.liveRoomContainer, .storeContainer, .offerContainer, .socialContainer, .profileContainer {
     background-color: rgba(0, 0, 0, 0.5);
     margin-top: 25px;
     margin-bottom: 25px;
@@ -991,10 +996,54 @@ ul.nav > li {
     width: 100%;
 }
 
+/*-------------------------------------------------------
+	Profile Styles
+-------------------------------------------------------*/
 
-.userName{
-    color: #db4a37;
+.profileTitle{
+    margin-top: 1%;
+    padding-top: 2%;
+    font-family: "ALL AGES", serif;
+    font-size: 30px;
+    color: white;
+}
+
+.profileHolderContainer{
+    background-color: #000000;
+    border-radius: 10px;
+    margin-top: 2%;
+    padding: 20px;
+    color: white;
+}
+
+.profileUserName{
     font-family: "Germania One", cursive;
+    font-size: 30px;
+    color: #db4a37;
+}
+
+.containerProfile{
+    margin-top: 5%;
+}
+
+.containerProfileImage{
+    border: 2px solid white;
+    height: 200px;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+
+.containerProfileInfos{
+    margin-top: 5%;
+}
+
+.spaceInfo{
+    margin-left: 4%;
+}
+
+.musicianUser{
+    margin-left: 0;
+    margin-top: 10%;
 }
 
 /*-------------------------------------------------------

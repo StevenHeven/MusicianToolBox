@@ -1,0 +1,40 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends "::base.html.twig" %}
+
+{% block content %}
+
+    <div class="profileContainer">
+        <div class="profileTitle"> Fiche du musicien</div>
+        <div class="profileHolderContainer">
+            <div class="profileUserName">{{ user.username }}</div>
+
+                <div class="row">
+                    <div class="containerProfileImage col-lg-2"></div>
+                    <div class="containerProfile">
+                    <div class="containerProfileInfosTitle col-lg-3">
+                        Email : <br>
+                        Dernière connexion : <br>
+                        Vit à : <br>
+                        Type de musicien : <br>
+                        Biographie : <br>
+                    </div>
+                    <div class="containerProfileInfosData col-lg-3">
+                        <span class="spaceInfo"><i class="fa fa-envelope" aria-hidden="true"></i> {{ user.email }}</span><br>
+                        <span class="spaceInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> Le {{ user.lastLogin|date('d-m-Y à H:i') }}</span><br>
+                        <span class="spaceInfo"><i class="fa fa-map-marker" aria-hidden="true"></i>  {{ user.adress.city }} </span><br>
+                        <span class="cont-bull_musician musicianUser">
+                            {% for musician_offer in user.musician %}
+                                <span class="bull_infos">
+                                                <i class="fa fa-user-circle"></i> {{ musician_offer.label }}
+                                            </span>
+                            {% endfor %}
+                        </span> <br>
+                        <span class="spaceInfo"> Bientôt disponible ...</span>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}

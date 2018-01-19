@@ -9,7 +9,7 @@
         <tr class="listTd">
             <th>Id</th>
             <th>Titre</th>
-            {#<th>Date</th>#}
+            <th>Date</th>
             <th>Salle</th>
             <th>Actions</th>
         </tr>
@@ -19,7 +19,7 @@
             <tr>
                 <td>{{ concert.id }}</td>
                 <td>{{ concert.name }}</td>
-                {#<td>{{ concert.date }}</td>#}
+                <td>{{ concert.date|date('d-m-Y H:i:s') }}</td>
                 {% if concert.liveroom is not null %}
                 <td>{{ concert.liveroom.name }}</td>
                 {% endif %}

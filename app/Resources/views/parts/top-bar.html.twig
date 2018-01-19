@@ -7,7 +7,7 @@
             <li class="register"><a href="{{ path('fos_user_registration_register') }}"><i class="fa fa-user"></i><span>Register</span></a></li>
             {% endif %}
             {% if app.user is not null %}
-                <li class="userName_barre"><a href="#"><i class="fa fa-user-circle"></i> <span class="userName">{{ app.user.username }}</span></a></li>
+                <li class="userName_barre"><a href="{{ path('fos_user_profile_show') }}"><i class="fa fa-user-circle"></i> <span class="userName">{{ app.user.username }}</span></a></li>
                 <li class="logout"><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
             {% endif %}
             <li class="search">
