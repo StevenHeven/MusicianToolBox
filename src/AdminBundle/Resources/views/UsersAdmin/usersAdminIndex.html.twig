@@ -2,30 +2,32 @@
 
 {% block content %}
 
-    <p>Voici toutes les concerts enregistrées dans notre BDD : </p>
+    <p>Voici toutes les utilisateurs enregistrées dans notre BDD : </p>
     <br>
     <table id="table_admin" class="table table-striped text-center display">
         <thead>
         <tr class="listTd">
             <th>Id</th>
-            <th>Titre</th>
-            {#<th>Date</th>#}
-            <th>Salle</th>
+            <th>Pseudo</th>
+            <th>Email</th>
+            {#<th>Rôles</th>#}
             <th>Actions</th>
         </tr>
         </thead>
         <tbody>
-        {% for concert in concerts %}
+        {% for user in users %}
             <tr>
-                <td>{{ concert.id }}</td>
-                <td>{{ concert.name }}</td>
-                {#<td>{{ concert.date }}</td>#}
-                {% if concert.liveroom is not null %}
-                <td>{{ concert.liveroom.name }}</td>
-                {% endif %}
-                {% if concert.liveroom is null %}
-                <td> N.S.</td>
-                {% endif %}
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                {#{% for roles in user.roles %}#}
+                    {#{% if roles == "ROLE_SUPER_ADMIN"%}#}
+                        {#<td>ADMIN</td>#}
+                    {#{% endif %}#}
+                    {#{% if roles != "ROLE_SUPER_ADMIN"%}#}
+                        {#<td>USER</td>#}
+                    {#{% endif %}#}
+                {#{% endfor %}#}
                 <td>
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn_action dropdown-toggle" data-toggle="dropdown"
@@ -33,9 +35,9 @@
                             Action <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu ">
-                            <li><a href="{{ path("editConcert", {"id": concert.id}) }}"><i
+                            <li><a href="{{ path("editUsers", {"id": user.id}) }}"><i
                                             class="glyphicon glyphicon-pencil"></i> &nbsp;Editer</a></li>
-                            <li><a href="{{ path("deleteConcert", {"id": concert.id}) }}"><i
+                            <li><a href="{{ path("deleteUsers", {"id": user.id}) }}"><i
                                             class="glyphicon glyphicon-remove"></i> &nbsp;Supprimer</a></li>
 
                         </ul>

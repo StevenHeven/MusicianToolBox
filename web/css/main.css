@@ -901,7 +901,12 @@ ul.nav > li {
     Add Offer Styles
 -------------------------------------------------------*/
 
-#appbundle_offer_style > .checkbox, #appbundle_offer_instrument > .checkbox, #appbundle_offer_musician > .checkbox, #fos_user_registration_form_musician > .radio, #appbundle_concert_style > .checkbox {
+#appbundle_offer_style > .checkbox,
+#appbundle_offer_instrument > .checkbox,
+#appbundle_offer_musician > .checkbox,
+#fos_user_registration_form_musician > .radio,
+#appbundle_concert_style > .checkbox,
+#fos_user_registration_form_musician > .checkbox{
     display: block;
     width: 25%;
     float: left;

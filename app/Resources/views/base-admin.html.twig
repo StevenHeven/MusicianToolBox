@@ -44,6 +44,7 @@
                 <li {% if app.request.get('_route') is same as('store.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('store.index') }}">Magasins</a></li>
                 <li {% if app.request.get('_route') is same as('offer.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('offer.index') }}">Petites Annonces</a></li>
                 <li {% if app.request.get('_route') is same as('concert.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('concert.index') }}">Concerts</a></li>
+                <li {% if app.request.get('_route') is same as('users.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('users.index') }}">Utilisateurs</a></li>
                 <li {% if app.request.get('_route') is same as('instrument.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('instrument.index') }}">Instruments</a></li>
                 <li {% if app.request.get('_route') is same as('musicCategory.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('musicCategory.index') }}">Style</a></li>
                 <li {% if app.request.get('_route') is same as('musicianCategory.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('musicianCategory.index') }}">Musiciens</a></li>

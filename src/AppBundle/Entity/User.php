@@ -31,6 +31,11 @@ class User extends BaseUser
     private $musician;
 
 
+    function __toString()
+    {
+        return $this->roles;
+    }
+
     /**
      * Set adress
      *

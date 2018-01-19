@@ -1,0 +1,11 @@
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% extends "::base-admin.html.twig" %}
+
+{% block content %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+
+{% endblock %}

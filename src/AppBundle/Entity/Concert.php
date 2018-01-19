@@ -80,6 +80,10 @@ class Concert
         $this->style = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+    function __toString()
+    {
+        return $this->date;
+    }
     /**
      * Set name
      *

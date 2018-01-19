@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Steven Dev17
- * Date: 04/10/2017
- * Time: 10:07
- */
 
 namespace AppBundle\Controller;
-
 
 use AppBundle\Entity\LiveRoom;
 use AppBundle\Form\LiveRoomType;

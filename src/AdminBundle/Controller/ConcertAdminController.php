@@ -73,7 +73,7 @@ class ConcertAdminController extends Controller
      * @param $id
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
-    //methode qui supprime une petite annonce
+    //methode qui supprime un concert
     public function deleteAction(Concert $concert, $id)
     {
 

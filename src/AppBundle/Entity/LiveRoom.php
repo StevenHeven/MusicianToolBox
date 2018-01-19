@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Steven Dev17
- * Date: 04/10/2017
- * Time: 09:45
- */
 
 namespace AppBundle\Entity;
 
@@ -63,6 +57,7 @@ class LiveRoom
      * @ORM\Column(type="string", nullable=true)
      */
     private $price;
+
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Concert", mappedBy="liveroom")
      */
