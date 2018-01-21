@@ -3,26 +3,50 @@
 ---------------------------------------*/
 
 @media (max-width: 767px) {
+
+    .mobile{display: block !important;}
+
     body:before, body:after {
         top: 130px;
+        background-image: none;
+        height: 220px;
     }
 
     #site-description {
         display: none;
     }
 
+    #appbundle_offer_style > .checkbox,
+    #appbundle_offer_instrument > .checkbox,
+    #appbundle_offer_musician > .checkbox,
+    #fos_user_registration_form_musician > .radio,
+    #appbundle_concert_style > .checkbox,
+    #fos_user_registration_form_musician > .checkbox{
+        width: 100%;
+        float: none;
+    }
+
+    /*-----------------------------------
+               Top Bar Styles
+    ------------------------------------*/
+
     #top-links li.login a,
-    #top-links li.register a {
+    #top-links li.register a,
+    #top-links li.userName_barre a,
+    #top-links li.logout a {
         padding: 0 15px;	}
 
     #top-links li.login a span,
-    #top-links li.register a span {
+    #top-links li.register a span,
+    #top-links li.logout a span{
         line-height: 0;
         font-size: 0;
     }
 
     #top-links li.login a .fa,
-    #top-links li.register a .fa {
+    #top-links li.register a .fa,
+    #top-links li.userName_barre a .fa,
+    #top-links li.logout a .fa {
         margin: 0;
     }
 
@@ -31,6 +55,15 @@
     .search-open .youtube,
     .search-open .google-plus {
         display: none;
+    }
+
+    /*-----------------------------------
+              Nav Styles
+    ------------------------------------*/
+    .logo .title{
+        font-size: 45px;
+        margin-left: 4%;
+        margin-top: 9%;
     }
 
     #main-nav ul.nav > li {
@@ -47,23 +80,31 @@
     }
 
     #main-nav ul.nav li a {
+        font-family: "Germania One", cursive;
         padding: 0 15px;
-        height: 40px;
-        line-height: 40px;
         margin: 0;
         float: none;
+    }
+
+    #main-nav .dropdown-menu{
+        margin-top: -17%;
+        margin-bottom: -5%;
+    }
+
+    .navbar{
+        height: 90px;
     }
 
     .navbar-default .navbar-collapse {
         border:none;
         background: #2c2c2c;
         box-shadow: 0px 0px 1px #202020;
+        z-index: 99;
+        position: relative;
     }
 
     .navbar > .container .navbar-brand {
-        line-height: 90px;
-        height:90px;
-        margin-left: 15px;
+        display: none;
     }
 
     .navbar > .container .navbar-brand img {
@@ -73,7 +114,7 @@
     .navbar-default .navbar-toggle {
         border-color: #707070;
         background-color: transparent;
-        margin:28px 15px 28px 0px;
+        margin:15px 15px 28px 0px;
     }
 
     .dropdown-menu li.divider {
@@ -100,29 +141,210 @@
 
     #main-nav .navbar-nav > .dropdown li a {
         padding-left: 35px;
+        position: relative;
     }
 
-    #breadcrumbs {
-        height:110px;
-        line-height: 110px;
+    .nav li:nth-child(1),
+    .nav li:nth-child(6){
+        z-index: 99;
+        position: relative;
     }
 
-    #banner .flexslider { height:500px; }
-    .slides li h1 {
-        font-size: 36px;
+    /* -----------  HOME PAGE   ------------- */
+
+    /*-----------------------------------
+	            Slider Styles
+    ------------------------------------*/
+    .carousel-inner{
+        height: 200px;
+    }
+
+    #first-slider .carousel .item{
+        min-height: 0;
+    }
+
+    #first-slider .text-slide{
+        font-size: 20px;
+        margin-top: -5%;
+    }
+
+    .carousel-control .fa-angle-left{
+        left: 23%;
+        margin-top: 16px;
+    }
+
+    .carousel-control .fa-angle-right{
+        right: 30%;
+        margin-top: 16px;
+    }
+
+    .carousel-control .discover{
+        left: 450%;
+    }
+
+    .carousel-control .btn_1, .carousel-control .btn_3{
+        left: 350%;
+    }
+
+    /*-----------------------------------
+          Presentation Home Styles
+   ------------------------------------*/
+
+    .lign-presentation, .why_sentence{
+        margin-top: 7%;
+        line-height: 110%;
+    }
+
+    .blocks4 .thumbnail{
+        min-height: 0;
+    }
+
+    /* -----------  LOGIN PAGE   ------------- */
+
+    .input_login{
+        width: 90%;
+    }
+
+    /* -----------  PROFILE PAGE   ------------- */
+
+    .containerProfile{
+        display: none;
+    }
+
+    /* ---------  INDEX ENTITY PAGE  ----------- */
+
+    .oneLiveRoomContainer,
+    .oneStoreContainer,
+    .oneOfferContainer,
+    .offer-content,
+    .oneConcertContainer{
+        margin-left: 0;
+        padding-bottom: 5px;
+    }
+
+    .titleLiveRoom,
+    .titleStore,
+    .titleOffer{
+        margin-top: 3%;
+    }
+
+    .add_liveRoom,.add_store, .add_Offer, .add_Concert{
+        display: block;
+        margin: 3% 0;
+    }
+
+    .btn_website{
+        position: absolute;
+        margin-top: 11%;
+        left: 83%;
+    }
+
+    .roomtitle, .storetitle{
+        line-height: 99%;
+    }
+
+    /* ---------  FORM ENTITY PAGE  ----------- */
+
+    .titleLiveRoomForm, .storeForm, .offerForm{
+        margin-top: 3%;
         margin-bottom: 5%;
     }
 
-    .slides li p {
-        font-size: 18px;
+    #appbundle_liveroom_submit,
+    #appbundle_store_submit,
+    #appbundle_offer_submit,
+    #fos_user_registration_form_submit ,
+    #appbundle_concert_submit{
+        margin-left: 0;
+        min-width: 0;
+        width: 100%;
+    }
+
+    #fos_user_registration_form_submit{
+        width: 89% !important;
+    }
+
+    /* ---------  INDEX OFFER PAGE  ----------- */
+
+    .containerPictureOffer{
+        height: 35px;
+    }
+
+    .offer:nth-child(2n) .oneOfferContainer{
+        background-color: #4b1105;
+    }
+
+    .offer:nth-child(2n+1) .oneOfferContainer:nth-child(2n+1){
+        background-color: #000000;
+    }
+
+    .offertitle{
+        font-size: 30px;
+    }
+
+    .pro_btn{
+       position: absolute;
+        margin-top: -12%;
+        left:92%
+    }
+
+    .lignCategory{
+        margin-left: 33.5%;
+        margin-top: -6%;
+    }
+
+    .offerprice{
+        margin-left: 28%;
+        font-size: 22px;
+        font-family: "Germania One", cursive;
+    }
+
+    /* -------  INDEX ONE OFFER PAGE ---------- */
+
+    .offerprice-top{
+        margin-top: -11%;
+        margin-bottom: 5%;
+    }
+
+    .hide-bullets{
+        margin: 0;
+    }
+
+    .btn-back{
+        display: block;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+    }
+
+    .offer-content .top-offer .option-content .lign-category .bull_infos{
+        display : inline-block;
+        margin-bottom: 2%;
+    }
+
+    /* -----------  SOCIAL PAGE   ------------- */
+
+    .socialContainer img{
+        width: 100%;
+    }
+    /*-----------------------------------
+               Footer Styles
+   ------------------------------------*/
+
+    .footer-container, .bottom-footer{
+        margin-left: 0;
+        margin-right: 0;
     }
 
     footer .footer-col {
         background: none;
+        text-align: center;
+        padding-right: 15px;
     }
 
-    .love {
-        display: none;
+    .subscribe-form .email{
+        width: 73%;
     }
 
     .copyright {
@@ -137,100 +359,6 @@
         display: table;
     }
 
-    .view-all {
-        width:25px;
-    }
-
-    .view-all-icon {
-        margin-left:0;
-    }
-
-    .view-all span {
-        line-height: 0;
-        font-size: 0;
-    }
-
-    h2 span.view {
-        display: none;
-    }
-
-    #gmap {
-        height:360px;
-    }
-
-    .map-container .info {
-        padding: 15px 20px;
-        line-height: 24px;
-        min-width: 170px;
-        left:30%;
-        top:60%;
-        height:100px;
-    }
-
-    .map-container .info p {
-        font-size: 13px;
-    }
-
-    .map-container .info .arrow {
-        left:40%;
-        top:-25px;
-        border-top: 13px solid transparent;
-        border-bottom: 13px solid #f04933;
-    }
-
-    .flex-direction-nav {left:20px; bottom: 10px;}
-    .event-gallery {
-        max-height: 240px;
-    }
-
-    .event-info dl dt {
-        float: left;
-    }
-
-    .event-info .action-buttons a {
-        height:40px;
-        width: 110px;
-        line-height: 40px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
-
-    .isotope-filters {
-        display: table;
-    }
-
-    .isotope-filters li {
-        float: none;
-        text-align: center;
-    }
-
-    .isotope-filters li .fa {
-        display: none;
-    }
-
-    .album-banner .banner-image {
-        height:240px;
-    }
-
-    .album-btns {
-        padding:20px 30px 0 45px;
-    }
-
-    .widget .tabs li a {
-        height:35px;
-        line-height:35px;
-        font-size:16px;
-        padding: 0 15px;
-    }
-
-    .post .post-image {
-        height: 200px;
-    }
-
-    a.next, a.prev {
-        display: none;
-    }
 }
 
 /*------------------------------------

@@ -9,12 +9,13 @@ class OfferRepository extends EntityRepository
 
     public function findAllWithComponents(){
         $qb= $this->createQueryBuilder('offer')
-            ->select('offer', 'adress', 'category', 'style', 'musician', 'instrument' )
+            ->select('offer', 'adress', 'category', 'style', 'musician', 'instrument', 'image' )
             ->leftJoin('offer.adress', 'adress')
             ->leftJoin('offer.category', 'category')
             ->leftJoin('offer.style', 'style')
             ->leftJoin('offer.musician', 'musician')
             ->leftJoin('offer.instrument', 'instrument')
+            ->leftJoin('offer.image', 'image')
             ->orderBy('offer.id', 'DESC');
 
         return $qb->getQuery()->getResult();

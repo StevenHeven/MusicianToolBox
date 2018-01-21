@@ -30,10 +30,8 @@
                 $(this).find(formgroupe[0]).show();
 
             $('#appbundle_offer_category').change(function() {
-                //Use $option (with the "$") to see that the variable is a jQuery object
                 var $option = $(this).find('option:selected');
-                //Added with the EDIT
-                var value = $option.val();//to get content of "value" attrib
+                var value = $option.val();
                 if (value == 0) {
                     $(formgroupe).hide();
                     $(formgroupe[0]).show();

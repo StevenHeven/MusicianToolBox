@@ -3,8 +3,11 @@
 
 {% block content %}
 
+    <p>Ajouter un musicien :</p>
+
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}
 
+    <a href="{{ path('musicianCategory.index') }}" class="btn btn-back"><span class="glyphicon glyphicon-chevron-left"></span> Annuler</a>
 {% endblock %}

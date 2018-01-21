@@ -27,6 +27,7 @@ class User extends BaseUser
 
     /**
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\MusicianCategory", cascade={"persist"}, fetch="EAGER")
+     * @Assert\NotBlank()
      */
     private $musician;
 

@@ -64,7 +64,7 @@ class OfferController extends Controller
     /**
      * @Route("/offer={id}", name="offer")
      */
-    public function offerAction($id, Request $request){
+    public function offerAction($id){
 
         $offer_images= $this->getDoctrine()
                 ->getRepository(Offer::class)

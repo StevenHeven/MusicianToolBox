@@ -46,6 +46,8 @@ body.index:before, body.index:after {
     color: #db4a37;
     font-family: "Germania One", cursive;
 }
+
+.mobile{display: none}
 /********************\
 /   BIG SLIDER STYLE   \
 \**********************/
@@ -323,7 +325,7 @@ body.index:before, body.index:after {
 }
 
 
-#appbundle_liveroom_submit, #appbundle_store_submit, #appbundle_offer_submit, .btn-back, .btn_login, #fos_user_registration_form_submit {
+#appbundle_liveroom_submit, #appbundle_store_submit, #appbundle_offer_submit, .btn-back, .btn_login, #fos_user_registration_form_submit, #appbundle_concert_submit {
     margin-left: 40%;
     min-width: 75px;
     width: 125px;
@@ -781,6 +783,7 @@ ul.nav > li {
     color: white;
 }
 
+
 .roomtitle, .storetitle {
     font-family: "ALL AGES", serif;
     font-size: 3em;
@@ -831,10 +834,6 @@ ul.nav > li {
 
 .oneOfferContainer {
     padding-top: 10px !important;
-}
-
-.textOffer {
-    margin-left: 20%;
 }
 
 .offertitle {

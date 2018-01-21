@@ -3,8 +3,12 @@
 
 {% block content %}
 
+    <p> Modifier la salle de concert :</p>
+
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}
+
+    <a href="{{ path('liveroom.index') }}" class="btn btn-back"><span class="glyphicon glyphicon-chevron-left"></span> Annuler</a>
 
 {% endblock %}

@@ -26,7 +26,7 @@
 
                                         <!-- Bottom switcher of slider -->
                                     {% if offer_images.image[i].url != "url" %}
-                                        <li class="col-sm-3">
+                                        <li class="col-sm-3 col-xs-3">
                                             <a class="thumbnail" id="carousel-selector-{{ i }}">
                                                 <img src="{{ asset(offer_images.image[i].webPath) }}">
                                             </a>
@@ -92,6 +92,7 @@
                                         </span>
                         {% endfor %}
                     </div>
+
                 {% endif %}
                 {% if offer_images.category == "Cours" %}
                     <div class="offerLessonInstrument" data-type="Cours">

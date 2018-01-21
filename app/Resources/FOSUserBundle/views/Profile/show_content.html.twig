@@ -9,16 +9,16 @@
             <div class="profileUserName">{{ user.username }}</div>
 
                 <div class="row">
-                    <div class="containerProfileImage col-lg-2"></div>
+                    <div class="containerProfileImage col-lg-2 col-xs-11"></div>
                     <div class="containerProfile">
-                    <div class="containerProfileInfosTitle col-lg-3">
+                    <div class="containerProfileInfosTitle col-lg-3 col-xs-6">
                         Email : <br>
                         Dernière connexion : <br>
                         Vit à : <br>
                         Type de musicien : <br>
                         Biographie : <br>
                     </div>
-                    <div class="containerProfileInfosData col-lg-3">
+                    <div class="containerProfileInfosData col-lg-6 col-xs-6">
                         <span class="spaceInfo"><i class="fa fa-envelope" aria-hidden="true"></i> {{ user.email }}</span><br>
                         <span class="spaceInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> Le {{ user.lastLogin|date('d-m-Y à H:i') }}</span><br>
                         <span class="spaceInfo"><i class="fa fa-map-marker" aria-hidden="true"></i>  {{ user.adress.city }} </span><br>
@@ -32,6 +32,27 @@
                         <span class="spaceInfo"> Bientôt disponible ...</span>
                     </div>
                     </div>
+                    <div class="containerProfile mobile">
+                        <div class="containerProfileInfosTitle col-lg-3 col-xs-11">
+                            Email : <br>
+                            <span class="spaceInfo"><i class="fa fa-envelope" aria-hidden="true"></i> {{ user.email }}</span><br>
+                            Dernière connexion :<br>
+                            <span class="spaceInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> Le {{ user.lastLogin|date('d-m-Y à H:i') }}</span><br>
+                            Vit à : <br>
+                            <span class="spaceInfo"><i class="fa fa-map-marker" aria-hidden="true"></i>  {{ user.adress.city }} </span><br>
+                            Type de musicien : <br>
+                              <span class="spaceInfo"><span class="cont-bull_musician musicianUser">
+                            {% for musician_offer in user.musician %}
+                                <span class="bull_infos">
+                                                <i class="fa fa-user-circle"></i> {{ musician_offer.label }}
+                                            </span>
+                            {% endfor %}
+                                  </span></span><br>
+                            Biographie :<br>
+                            <span class="spaceInfo">Bientôt disponible ... </span>
+                        </div>
+                    </div>
+
             </div>
         </div>
 

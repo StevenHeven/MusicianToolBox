@@ -1,8 +1,14 @@
 /* Space out content a bit */
+.mobile{ display: none  ;}
+
 body {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #2c2c2c;
+}
+
+a{
+    color: #db4a37;
 }
 
 .container {
@@ -10,6 +16,10 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     border: 2px solid #000000;
+}
+
+.mobile{
+    display: none;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -20,9 +30,12 @@ body {
     padding-left: 15px;
 }
 
+.desktop{
+    display: inline;
+}
+
 /* Custom page header */
 .header {
-    padding-bottom: 20px;
     padding-top: 20px;
     margin-top: 15px;
     border-radius: 7px;
@@ -49,12 +62,17 @@ body {
 
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-    margin-top: 3px;
+    display: inline-block;
+    margin-top: 6px;
     margin-bottom: 0;
-    margin-left: 12%;
+    margin-left: 7%;
     line-height: 40px;
     color: white;
     font-family: "Shredded", sans-serif !important;
+}
+
+.marketing{
+    margin-top: 3%;
 }
 
 /* Custom page footer */
@@ -67,7 +85,6 @@ body {
 .logo {
     position: absolute;
     top: 4%;
-    left: 21%;
     width: 6%;
 }
 
@@ -145,55 +162,84 @@ body {
     font-family: "Germania One", sans-serif;
 }
 
-
-/* Customize container */
-@media (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-}
-
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-    padding: 14px 24px;
-    font-size: 21px;
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-
-.marketing p + h4 {
-    margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-right: 0;
-        padding-left: 0;
+@media (max-width: 767px) {
+    .desktop{
+        display: none;
     }
 
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
+    .mobile{
+        display: block;
     }
 
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
+    .logo{
+        position: relative;
+        top: 0;
+        width: 25%;
+    }
+
+    .nav{
+        display: block;
+        margin-left: auto;
+    }
+
+    .navbar-toggle{
+        background: #000;
+        border-color: #db4a37;
+    }
+
+    .navbar-toggle .icon-bar{
+        background-color: #db4a37;
+    }
+
+    .dropdown-menu{
+        left: -80%;
+    }
+
+    .dataTables_length{
+        margin-left: 0;
+    }
+
+    .dataTables_filter{
+        margin-top: -26%;
+        margin-bottom: 8%;
+        margin-left: 30%;
+    }
+
+    .dataTables_paginate {
+        text-align: center;
+    }
+
+    .offers-table{
+        margin-left: -5%;
+    }
+
+    .instrumentsTable,
+    .musicTable,
+    .musicianTable{
+        margin-top: 3%;
+    }
+
+    .offers-table tbody tr td:nth-child(3),
+    .users-table tbody tr td:nth-child(3){
+        word-break: break-word;
+    }
+
+    .offers-table .dropdown-menu{
+        left: -110%;
+    }
+
+    .concertTable{
+        margin-left: -6%;
+    }
+
+    .btn_add{
+        top:4%;
+        left: 53%;
+    }
+
+    .btn_add_musicCategory,
+    .btn_add_musicianCategory{
+        top: 4%;
+        left: 47%
     }
 }

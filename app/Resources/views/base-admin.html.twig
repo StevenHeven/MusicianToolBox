@@ -38,19 +38,37 @@
 
 <div class="container">
     <div class="header clearfix">
-        <nav>
-            <ul class="nav nav-pills pull-right">
-                <li {% if app.request.get('_route') is same as('liveroom.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('liveroom.index') }}">Salles de concert</a></li>
-                <li {% if app.request.get('_route') is same as('store.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('store.index') }}">Magasins</a></li>
-                <li {% if app.request.get('_route') is same as('offer.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('offer.index') }}">Petites Annonces</a></li>
-                <li {% if app.request.get('_route') is same as('concert.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('concert.index') }}">Concerts</a></li>
-                <li {% if app.request.get('_route') is same as('users.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('users.index') }}">Utilisateurs</a></li>
-                <li {% if app.request.get('_route') is same as('instrument.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('instrument.index') }}">Instruments</a></li>
-                <li {% if app.request.get('_route') is same as('musicCategory.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('musicCategory.index') }}">Style</a></li>
-                <li {% if app.request.get('_route') is same as('musicianCategory.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('musicianCategory.index') }}">Musiciens</a></li>
-            </ul>
+        <nav class="navbar" role="navigation">
+            <!-- Logo and toggle for navigation on mobile devices -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="mobile">
+                <img class="logo" src="{{ asset('img/Logo_2-white.svg') }}"> <h3 class="text-muted">MTB ADMIN</h3>
+                </div>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="main-nav">
+                <div class="desktop">
+                <img class="logo" src="{{ asset('img/Logo_2-white.svg') }}"> <h3 class="text-muted">MTB ADMIN</h3>
+                </div>
+                <ul class="nav navbar-nav navbar-right nav-pills pull-right">
+                    <li {% if app.request.get('_route') is same as('liveroom.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('liveroom.index') }}">Salles de concert</a></li>
+                    <li {% if app.request.get('_route') is same as('store.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('store.index') }}">Magasins</a></li>
+                    <li {% if app.request.get('_route') is same as('offer.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('offer.index') }}">Petites Annonces</a></li>
+                    <li {% if app.request.get('_route') is same as('concert.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('concert.index') }}">Concerts</a></li>
+                    <li {% if app.request.get('_route') is same as('users.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('users.index') }}">Utilisateurs</a></li>
+                    <li {% if app.request.get('_route') is same as('instrument.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('instrument.index') }}">Instruments</a></li>
+                    <li {% if app.request.get('_route') is same as('musicCategory.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('musicCategory.index') }}">Style</a></li>
+                    <li {% if app.request.get('_route') is same as('musicianCategory.index') %}class="active" {% endif %}role="presentation"><a href="{{ path('musicianCategory.index') }}">Musiciens</a></li>
+                </ul>
+            </div>
         </nav>
-        <img class="logo" src="{{ asset('img/Logo_2-white.svg') }}"> <h3 class="text-muted">MTB ADMIN</h3>
     </div>
 
     <div class="row marketing">

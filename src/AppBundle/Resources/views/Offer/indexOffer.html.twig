@@ -27,9 +27,16 @@
 
         <div id="OfferHolder content">
             {% for offer in offers %}
+                {#{% for image in offer.image %}#}
+                {#{{ dump(image) }}#}
+                    {#<img src="{{ asset(image.webpath) }}">#}
+                    {#{% endfor %}#}
                 <div class="row offer">
                     <div class="col-lg-11 oneOfferContainer">
-                        <div class="textOffer">
+                        <div class="col-lg-2 col-xs-4 containerPictureOffer">
+
+                        </div>
+                        <div class="col-lg-10 textOffer">
                             <div class="row">
                                 <p class="col-lg-11 offertitle"><a href="{{ path('offer', {'id': offer.id}) }}"> {{ offer.title }}</a></p>
                                 {% if offer.checkpro == 1 %}

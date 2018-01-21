@@ -3,8 +3,12 @@
 
 {% block content %}
 
+    <p> Modifier le style de musique :</p>
+
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}
+
+    <a href="{{ path('musicCategory.index') }}" class="btn btn-back"><span class="glyphicon glyphicon-chevron-left"></span> Annuler</a>
 
 {% endblock %}
