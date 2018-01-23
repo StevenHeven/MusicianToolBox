@@ -195,6 +195,11 @@
         line-height: 110%;
     }
 
+    .lign_why{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .blocks4 .thumbnail{
         min-height: 0;
     }
@@ -332,7 +337,7 @@
                Footer Styles
    ------------------------------------*/
 
-    .footer-container, .bottom-footer{
+    .footer-container, .bottom-footer, .lign-footer{
         margin-left: 0;
         margin-right: 0;
     }
@@ -366,19 +371,27 @@
 ------------------------------------*/
 
 @media (min-width: 768px) and (max-width: 991px) {
-    #site-description {
-        width:200px;
+
+    .germania{
+        font-size: 22px;
+    }
+
+    .cantarell{
+        font-size: 18px;
+    }
+
+    /*-----------------------------------
+               Nav Styles
+   ------------------------------------*/
+    .title{
+        font-size: 7em;
+        margin-left: 0;
+        margin-top: 4%;
     }
 
     body:before, body:after {
         top: 130px;
-    }
-
-    .search-open .facebook,
-    .search-open .twitter,
-    .search-open .youtube,
-    .search-open .google-plus {
-        display: none;
+        background-image: none;
     }
 
     .navbar-default .navbar-toggle {
@@ -393,12 +406,28 @@
     }
 
     .navbar > .container .navbar-brand img {
-        height:50%;
+        height:100%;
+    }
+
+    .navbar-collapse{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .menu{
+        margin-top: -4%;
+    }
+
+    .img-navbar-brand{
+        width: auto;
+        margin-top: -6%;
+        margin-left: -9%;
     }
 
     ul.nav > li {
         height: 90px;
         line-height: 90px;
+        margin-left: -1%;
     }
 
     #main-nav ul.nav li a {
@@ -416,49 +445,163 @@
         margin: 30px 0;
     }
 
-    #banner .flexslider { height:500px; }
-    .slides li h1 {
-        font-size: 48px;
+    /* -----------  INDEX PAGE   ------------- */
+
+    .slider{
+        margin-top: 2%;
     }
+
+    .text-slide{
+        margin-left: -4% !important;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .carousel-control .btn_1, .carousel-control .btn_3{
+        left: 570%;
+    }
+
+    .carousel-control .btn_2, .carousel-control .btn_4{
+        left: 625%;
+    }
+
+    /* ---------  INDEX ENTITY PAGE  ----------- */
+
+    .titleLiveRoom, .titleStore, .titleOffer{
+        font-size: 40px !important;
+    }
+
+    .liveRoomContainer, .storeContainer, .offerContainer, .socialContainer, .profileContainer{
+        padding-top: 2%;
+    }
+
+    .oneLiveRoomContainer, .oneStoreContainer, .oneOfferContainer, .offer-content, .oneConcertContainer{
+        margin-left: 30px;
+    }
+
+    .add_liveRoom{
+        display: block;
+        margin: 10px auto;
+        width: 40%;
+    }
+
+    .add_store, .add_Offer, .add_Concert{
+        display: block;
+        margin: 0 auto 2% auto ;
+        width: 33%;
+    }
+
+    .add_Concert{
+        width: 40%;
+    }
+
+    .buttons .btn{
+        width: 25%;
+        font-size: 18px;
+    }
+
+    .btn_website{
+        position: absolute;
+        margin-top: -5%;
+        left: 89%;
+    }
+
+    .oneLiveRoomContainer .postedBy, .oneStoreContainer .postedBy, .oneConcertContainer .postedBy{
+        font-size: 16px;
+    }
+
+    .userName{
+        font-size: 20px;
+    }
+
+    /* ---------  INDEX OFFER PAGE  ----------- */
+
+    .lignCategory, .offerprice, .offer_sublign{
+        margin-left: 25%;
+    }
+
+    .cont-bull_instrument, .cont-bull_musician{
+        margin-left: 20%;
+    }
+
+    .cont-bull_instrument .bull_infos, .cont-bull_musician .bull_infos{
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+
+    .pro_btn{
+        position: absolute;
+        margin-top: -5%;
+        left:94%
+    }
+
+    .btn-back{
+        margin-left: 7.5%;
+    }
+
+
+    /* ---------  FORM ENTITY PAGE  ----------- */
+
+    #appbundle_offer_style > .checkbox,
+    #appbundle_offer_instrument > .checkbox,
+    #appbundle_offer_musician > .checkbox,
+    #fos_user_registration_form_musician > .radio,
+    #appbundle_concert_style > .checkbox,
+    #fos_user_registration_form_musician > .checkbox{
+        width: 33%;
+    }
+
+    #fos_user_registration_form_musician{
+        margin-bottom: 27%;
+    }
+
+    .btn_login, #fos_user_registration_form_submit{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .titleLiveRoomForm, .storeForm, .offerForm{
+        font-size: 30px;
+        padding-top: 2%;
+    }
+
+    #appbundle_liveroom_submit,
+    #appbundle_store_submit,
+    #appbundle_offer_submit,
+    #appbundle_concert_submit,
+    .btn_login,
+    #fos_user_registration_form_submit{
+        font-size: 20px;
+    }
+
+    #appbundle_liveroom_submit,
+    #appbundle_store_submit,
+    #appbundle_offer_submit,
+    #appbundle_concert_submit{
+        margin-left: 30%;
+    }
+
+    .offerprice-top{
+        margin-top: -5%;
+        margin-bottom: 3%;
+        font-size: 30px;
+    }
+
+    /* -----------  SOCIAL PAGE   ------------- */
+
+    .socialContainer img{
+        width: 100%;
+    }
+
+    /*-----------------------------------
+               Footer Styles
+   ------------------------------------*/
 
     footer .footer-col:nth-child(2n) {
         background: none;
     }
 
-    .love {
-        display: none;
-    }
-
-    #gmap {
-        height:360px;
-    }
-
-    .map-container .info {
-        padding: 30px 20px;
-    }
-
-    .map-container .info p {
-        font-size: 14px;
-    }
-
-    .event-gallery {
-        max-height: 360px;
-    }
-
-    .album-banner .banner-image {
-        height:360px;
-    }
-
-    .widget .tabs li a {
-        height:30px;
-        line-height:30px;
-        font-size:14px;
-        padding: 0 10px;
-    }
-
-    .post .post-image {
-        height: 270px;
-    }
 }
 
 /*------------------------------------
@@ -507,23 +650,49 @@
 -------------------------------------------------*/
 
 @media (min-width: 991px) and (max-width: 1199px) {
-    #gmap {
-        height:420px;
+    .img-navbar-brand{
+        width: 195px;
+        margin-left: -7%;
+        margin-top: -41%;
     }
 
-    .map-container .info {
-        padding: 40px 20px;
+    .title{
+        font-size: 8.5em;
+        margin-left: -2%;
+        margin-top: 4%;
     }
 
-    .map-container .info p {
-        font-size: 18px;
+    .menu{
+        margin-top: -20px;
     }
 
-    .widget .tabs li a {
-        height:35px;
-        line-height:35px;
-        font-size:16px;
-        padding: 0 15px;
+    .add_liveRoom{
+        margin-left: 41%;
+    }
+
+    .btn_website{
+        position: absolute;
+        margin-top: -5%;
+        left: 89%;
+    }
+
+    .pro_btn{
+        position: absolute;
+        margin-top: -4%;
+        left:92%
+    }
+
+    .lignCategory, .offerprice, .offer_sublign, .cont-bull_instrument, .cont-bull_musician{
+        margin-left: 24%;
+    }
+
+    .offerprice-top {
+        margin-top: -4%;
+        margin-bottom: 2%;
+    }
+
+    .btn-back{
+        margin-left: 9%;
     }
 }
 

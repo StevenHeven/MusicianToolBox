@@ -243,3 +243,47 @@ a{
         left: 47%
     }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .logo{
+        top:-14%;
+        left: 25%;
+        width: 18%;
+    }
+
+    .header h3{
+        font-size: 30px;
+        margin-top: 3px;
+        margin-left: 44%;
+    }
+    .navbar-nav > li{
+        width: 24%;
+    }
+
+    .dataTables_paginate{
+        margin-top: -7%;
+        margin-left: 33%;
+    }
+
+    .dropdown-menu{
+        left: -67%;
+    }
+
+    #appbundle_liveroom_submit,
+    #appbundle_user_submit,
+    #appbundle_concert_submit,
+    #appbundle_offer_submit,
+    #appbundle_store_submit,
+    #appbundle_instruments_submit,
+    #appbundle_musiccategory_submit,
+    #appbundle_musiciancategory_submit
+    {
+        display: block;
+        margin-left: auto;
+    }
+
+    .btn-back{
+        margin-top: -13%;
+    }
+}

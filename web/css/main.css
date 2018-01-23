@@ -981,6 +981,15 @@ ul.nav > li {
     margin-top: 2%;
 }
 
+.cont-style-music{
+    margin-top: -2%;
+    margin-bottom: 2%;
+}
+
+.adress{
+    margin-left: 1%;
+}
+
 .hide-bullets {
     list-style: none;
     margin-left: -40px;

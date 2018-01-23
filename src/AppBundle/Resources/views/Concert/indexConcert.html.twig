@@ -27,10 +27,10 @@
         <div id="LiveRoomHolder">
             {% for concert in concerts %}
                 <div class="row liveroom">
-                    <div class="col-lg-11 oneConcertContainer">
+                    <div class="col-lg-11 col-sm-11 oneConcertContainer">
                         <div class="row">
                             <p class="col-lg-11 roomtitle">{{ concert.name }}</p>
-                            <p class="col-lg-1">
+                            <p class="col-lg-1 btn_website">
                                 {% if concert.website is not empty %}
                                     <a href="{{ concert.website }}" class="btn btn-xs btn-danger" target="_blank" title='Site Web de "{{ concert.name }}"'><span
                                                 class="glyphicon glyphicon-globe"></span> </a>
@@ -45,7 +45,19 @@
                         <p class="adress cantarell text-uppercase"><i
                                     class="glyphicon glyphicon-map-marker icon"></i> {{ concert.liveroom.name }}
                         </p>
-                            {% endif %}
+                        {% endif %}
+
+                        {% if concert.style is not null %}
+                            <div class="cont-style-music">
+                            {% for style in concert.style %}
+
+                                    <span class="bull_infos">
+                                                    <i class="fa fa-music" aria-hidden="true"></i> {{ style.label }}
+                                                </span>
+                            {% endfor %}
+                            </div>
+                        {% endif %}
+
                         <p class="price"><span class="germania">Prix de l'entrée :</span><span
                                     class="cantarell"> {% if concert.price == 0 %}
                                     Gratuit{% endif %}
