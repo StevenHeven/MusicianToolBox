@@ -36,23 +36,26 @@ body.index:before, body.index:after {
     font-size: 18px;
 }
 
-.postedBy{
+.postedBy {
     text-align: right;
     margin-right: 7%;
     padding-bottom: 2%;
 }
 
-.userName{
+.userName {
     color: #db4a37;
     font-family: "Germania One", cursive;
 }
 
-.mobile{display: none}
+.mobile {
+    display: none
+}
+
 /********************\
 /   BIG SLIDER STYLE   \
 \**********************/
 
-.slider{
+.slider {
     margin-top: 3%;
     margin-bottom: 3%;
 }
@@ -65,13 +68,12 @@ body.index:before, body.index:after {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-family: "Germania One",cursive;
+    font-family: "Germania One", cursive;
     font-size: 28px;
     text-align: center;
     color: white;
     text-shadow: 0 4px 9px rgba(0, 0, 0, 0.8);
 }
-
 
 #first-slider .carousel .item {
     min-height: 425px;
@@ -124,16 +126,16 @@ body.index:before, body.index:after {
     z-index: 2;
 }
 
-.carousel-control .fa-angle-right, .carousel-control .fa-angle-left{
+.carousel-control .fa-angle-right, .carousel-control .fa-angle-left {
     position: absolute;
     top: 37%;
     z-index: 5;
     display: inline-block;
     background: #c10310; /* Old browsers */
     background: -moz-linear-gradient(left, #c10310 0%, #8f0222 50%, #6d0019 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #c10310 0%,#8f0222 50%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #c10310 0%,#8f0222 50%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c10310', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 */
+    background: -webkit-linear-gradient(left, #c10310 0%, #8f0222 50%, #6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #c10310 0%, #8f0222 50%, #6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c10310', endColorstr='#6d0019', GradientType=1); /* IE6-9 */
 }
 
 .carousel-control .fa-angle-left {
@@ -161,20 +163,20 @@ body.index:before, body.index:after {
     border-radius: 53px;
 }
 
-.carousel-control .discover {
+.carousel-control .discover, .lignAdd .addBtn {
     position: absolute;
     display: inline-block;
     background: #c10310; /* Old browsers */
     background: -moz-linear-gradient(left, #c10310 0%, #8f0222 50%, #6d0019 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #c10310 0%,#8f0222 50%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #c10310 0%,#8f0222 50%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c10310', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 */
+    background: -webkit-linear-gradient(left, #c10310 0%, #8f0222 50%, #6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #c10310 0%, #8f0222 50%, #6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c10310', endColorstr='#6d0019', GradientType=1); /* IE6-9 */
     top: 51%;
     left: 725%;
     width: 150px;
     height: 32px;
     margin-top: 50px;
-    padding-top: 6% ;
+    padding-top: 6%;
     font-size: 20px;
     font-family: "Germania One", cursive;
     font-weight: lighter;
@@ -184,7 +186,20 @@ body.index:before, body.index:after {
     border-radius: 53px;
 }
 
-.carousel-control .btn_1, .carousel-control .btn_3{
+.lignAdd {
+    text-align: center;
+}
+
+.lignAdd .addBtn {
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1%;
+    text-align: center;
+}
+
+.carousel-control .btn_1, .carousel-control .btn_3 {
     width: 200px;
     left: 665%;
 }
@@ -217,10 +232,10 @@ body.index:before, body.index:after {
 }
 
 #first-slider .slide4 {
-     background-image: url("../img/photos/Home_Concerts2.jpg");
-     background-size: cover;
-     background-repeat: no-repeat;
- }
+    background-image: url("../img/photos/Home_Concerts2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 #first-slider .slide5 {
     background-image: url("../img/photos/bg.jpg");
@@ -228,7 +243,7 @@ body.index:before, body.index:after {
     background-repeat: no-repeat;
 }
 
-.lign-presentation, .why_sentence{
+.lign-presentation, .why_sentence, .also_sentence {
     margin-top: 5%;
     font-size: 40px;
     color: white;
@@ -236,57 +251,48 @@ body.index:before, body.index:after {
     text-align: center;
 }
 
-.lign-blocks{
+.lign-blocks {
     margin-top: 2%;
 }
 
-.blocks4 .thumbnail{
+.blocks4 .thumbnail, .lignAdd .thumbnail {
     background-color: #0f0f0f;
     border: 1px solid #db4a37;
     min-height: 490px;
 }
 
-.blocks4 .thumbnail img{
+.blocks4 .thumbnail img {
     border-radius: 4px 4px 0 0;
 }
 
-.blocks4 .thumbnail .caption{
+.blocks4 .thumbnail .caption, .lignAdd .thumbnail .caption {
     color: white !important;
 }
 
-.blocks4 .thumbnail .caption h3{
+.blocks4 .thumbnail .caption h3, .lignAdd .thumbnail .caption h3 {
     font-family: "Germania One", cursive;
     text-align: center;
 }
 
-.blocks4 .thumbnail .caption p{
+.blocks4 .thumbnail .caption p {
     font-family: "Cantarell", sans-serif;
     text-align: center;
 }
 
-.lign_why{
+.lign_why {
     background: #ad4f3b; /* Old browsers */
     background: -moz-linear-gradient(top, #262626 0%, #ad4f3b 75%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #262626 0%,#ad4f3b 75%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,#262626 0%,#ad4f3b 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#ad4f3b',GradientType=0 ); /* IE6-9 */
+    background: -webkit-linear-gradient(top, #262626 0%, #ad4f3b 75%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #262626 0%, #ad4f3b 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#262626', endColorstr='#ad4f3b', GradientType=0); /* IE6-9 */
 }
 
-/*.lign_why{*/
-    /*background: #42000c;*/
-/*}*/
-
-.why_sentence{
+.why_sentence {
     margin-top: 2%;
     margin-bottom: 5%;
 }
 
-.photo_Of_Me{
-    width: 100%;
-    margin-right: 5%;
-}
-
-.text-presentation{
+.text-presentation {
     color: white;
     font-size: 20px;
     font-family: 'Roboto Condensed', cursive;
@@ -297,6 +303,52 @@ body.index:before, body.index:after {
 
 .text-presentation img {
     width: 60%;
+}
+
+.lign_img{
+    margin-left: 0;
+}
+
+.lignAdd{
+    background: #262626; /* Old browsers */
+    background: -moz-linear-gradient(top, #ad4f3b 0%, #262626 75%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ad4f3b 0%, #262626 75%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ad4f3b 0%,#262626 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ad4f3b', endColorstr='#262626', GradientType=0); /* IE6-9 */
+    margin-bottom: 4%;
+}
+
+.lignAdd img{
+    width: 35%;
+    border: 1px solid #db4a37;
+    border-radius: 50%;
+    padding: 5%;
+    background-color: #512500;
+    z-index: 99;
+    position: relative;
+}
+
+.also_sentence{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.lignAdd .block1, .lignAdd .block2, .lignAdd .block3, .lignAdd .block4{
+    margin-top: -4%;
+}
+
+.lignAdd .thumbnail{
+    background-color: #000;
+    padding-top: 9%;
+    min-height: 300px;
+}
+
+.lignAdd  .thumbnail a{
+    text-decoration: none;
+}
+
+.lignAdd  .thumbnail .btn_3{
+    height: 58px;
 }
 
 .form-control {
@@ -324,7 +376,6 @@ body.index:before, body.index:after {
     font-family: 'Cantarell', sans-serif;
 }
 
-
 #appbundle_liveroom_submit, #appbundle_store_submit, #appbundle_offer_submit, .btn-back, .btn_login, #fos_user_registration_form_submit, #appbundle_concert_submit {
     margin-left: 40%;
     min-width: 75px;
@@ -335,19 +386,19 @@ body.index:before, body.index:after {
     color: #db4a37;
 }
 
-.btn_login, #fos_user_registration_form_submit{
+.btn_login, #fos_user_registration_form_submit {
     margin-left: 0;
 }
 
-#appbundle_liveroom_submit:hover, #appbundle_store_submit:hover, #appbundle_offer_submit:hover, .btn-back:hover, .btn_login:hover, #fos_user_registration_form_submit:hover{
+#appbundle_liveroom_submit:hover, #appbundle_store_submit:hover, #appbundle_offer_submit:hover, .btn-back:hover, .btn_login:hover, #fos_user_registration_form_submit:hover {
     background-color: #0f0f0f;
     color: #f3b414;
     border-color: #db4a37;
 }
 
-    /*-------------------------------------------------------
-        Top Bar Styles
-    -------------------------------------------------------*/
+/*-------------------------------------------------------
+    Top Bar Styles
+-------------------------------------------------------*/
 
 #top-bar {
     height: 40px;
@@ -400,10 +451,10 @@ body.index:before, body.index:after {
 #top-links li.register a .fa {
     margin-right: 10px;
 }
+
 #top-links li.userName_barre a .fa {
     margin-right: 10px;
 }
-
 
 #top-links li.facebook a, #top-links li.twitter a,
 #top-links li.google-plus a, #top-links li.youtube a,
@@ -652,7 +703,7 @@ ul.nav > li {
     Login Page Styles
 -------------------------------------------------------*/
 
-.form_login{
+.form_login {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -661,13 +712,12 @@ ul.nav > li {
     border-radius: 10px;
 }
 
-
-.label_username{
+.label_username {
     margin-left: 4px;
     margin-top: 20px;
 }
 
-.input_login{
+.input_login {
     background-color: #0f0f0f;
     border-radius: 5px;
     border-color: #db4a37;
@@ -675,7 +725,7 @@ ul.nav > li {
     text-align: center;
 }
 
-.input_login:focus{
+.input_login:focus {
     border-color: #db4a37 !important;
     -webkit-box-shadow: 1px 1px 5px 3px #db4a37;
     box-shadow: 1px 1px 5px 3px #db4a37;
@@ -685,7 +735,7 @@ ul.nav > li {
     Register Page Styles
 -------------------------------------------------------*/
 
-.form_registration{
+.form_registration {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 30px;
@@ -693,18 +743,18 @@ ul.nav > li {
     border-radius: 10px;
 }
 
-.form_registration_cont{
+.form_registration_cont {
     background-color: #000000;
     border: 1px solid #db4a37;
 }
 
-#fos_user_registration_form > .form-group > label, #fos_user_registration_form_adress > .form-group > label{
+#fos_user_registration_form > .form-group > label, #fos_user_registration_form_adress > .form-group > label {
     font-family: "Germania One", sans-serif;
     font-size: 1.5em;
     color: #db4a37;
 }
 
-#fos_user_registration_form > .form-group > input, #fos_user_registration_form_adress > .form-group > input{
+#fos_user_registration_form > .form-group > input, #fos_user_registration_form_adress > .form-group > input {
     border: outset 2px #db4a37;
     padding-bottom: 10px !important;
 }
@@ -713,24 +763,23 @@ ul.nav > li {
     color: #db4a37;
 }
 
-
-#fos_user_registration_form > .form-group > .form-control, #fos_user_registration_form_adress > .form-group >.form-control{
+#fos_user_registration_form > .form-group > .form-control, #fos_user_registration_form_adress > .form-group > .form-control {
     width: 70% !important;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-.fos_user_registration_register > div > input[type="submit"]{
+.fos_user_registration_register > div > input[type="submit"] {
     display: none;
 }
 
-.register_confirmed_container{
+.register_confirmed_container {
     background-color: #000000;
     border-radius: 10px;
     color: white;
     font-family: "Cantarell", sans-serif;
-    margin : 2% 0 2% 0;
+    margin: 2% 0 2% 0;
     padding: 2% 2% 1% 2%;
     text-align: center;
 }
@@ -752,7 +801,7 @@ ul.nav > li {
     border-radius: 25px;
 }
 
-.socialContainer{
+.socialContainer {
     text-align: center;
 }
 
@@ -774,7 +823,7 @@ ul.nav > li {
     margin-left: 70.5%;
 }
 
-.oneLiveRoomContainer, .oneStoreContainer, .oneOfferContainer, .offer-content , .oneConcertContainer{
+.oneLiveRoomContainer, .oneStoreContainer, .oneOfferContainer, .offer-content, .oneConcertContainer {
     background-color: #000000;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -782,7 +831,6 @@ ul.nav > li {
     padding-top: 20px;
     color: white;
 }
-
 
 .roomtitle, .storetitle {
     font-family: "ALL AGES", serif;
@@ -806,7 +854,7 @@ ul.nav > li {
     line-height: 1.2;
 }
 
-.oneLiveRoomContainer .postedBy, .oneStoreContainer .postedBy, .oneConcertContainer .postedBy{
+.oneLiveRoomContainer .postedBy, .oneStoreContainer .postedBy, .oneConcertContainer .postedBy {
     margin-right: 1%;
     padding-bottom: 1%;
 }
@@ -910,7 +958,7 @@ ul.nav > li {
 #appbundle_offer_musician > .checkbox,
 #fos_user_registration_form_musician > .radio,
 #appbundle_concert_style > .checkbox,
-#fos_user_registration_form_musician > .checkbox{
+#fos_user_registration_form_musician > .checkbox {
     display: block;
     width: 25%;
     float: left;
@@ -981,12 +1029,12 @@ ul.nav > li {
     margin-top: 2%;
 }
 
-.cont-style-music{
+.cont-style-music {
     margin-top: -2%;
     margin-bottom: 2%;
 }
 
-.adress{
+.adress {
     margin-left: 1%;
 }
 
@@ -1008,7 +1056,7 @@ ul.nav > li {
 	Profile Styles
 -------------------------------------------------------*/
 
-.profileTitle{
+.profileTitle {
     margin-top: 1%;
     padding-top: 2%;
     font-family: "ALL AGES", serif;
@@ -1016,7 +1064,7 @@ ul.nav > li {
     color: white;
 }
 
-.profileHolderContainer{
+.profileHolderContainer {
     background-color: #000000;
     border-radius: 10px;
     margin-top: 2%;
@@ -1024,32 +1072,32 @@ ul.nav > li {
     color: white;
 }
 
-.profileUserName{
+.profileUserName {
     font-family: "Germania One", cursive;
     font-size: 30px;
     color: #db4a37;
 }
 
-.containerProfile{
+.containerProfile {
     margin-top: 5%;
 }
 
-.containerProfileImage{
+.containerProfileImage {
     border: 2px solid white;
     height: 200px;
     margin-left: 4%;
     margin-top: 2%;
 }
 
-.containerProfileInfos{
+.containerProfileInfos {
     margin-top: 5%;
 }
 
-.spaceInfo{
+.spaceInfo {
     margin-left: 4%;
 }
 
-.musicianUser{
+.musicianUser {
     margin-left: 0;
     margin-top: 10%;
 }

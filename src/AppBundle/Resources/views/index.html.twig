@@ -71,7 +71,6 @@
                                 <a class="discover carousel-control" href="{{ path('indexSocial') }}" role="button"
                                    data-slide="discover">
                                     <span class="discover btn_5">MTB Social</span> </a>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -157,43 +156,70 @@
             </div>
         </div>
     </div>
-    <div class="container">
-    <div class="row ">
-        <p class="also_sentence">MusicianToolBox, c'est aussi le partage des bons plans</p>
-        <div class="col-lg-3 col-sm-6 block1">
-            <div class="thumbnail">
-                <img src="{{ asset('img/icons/Icon_Map.svg') }}">
-                <div class="caption">
-                    <p></p>
+</div>
+        <div class="row lignAdd">
+            <div class="container">
+            <p class="also_sentence">MusicianToolBox, c'est aussi le partage des bons plans</p>
+                <div class="row lign_img">
+                    <div class="col-lg-3 col-sm-6 img1">
+                        <img src="{{ asset('img/icons/Icon_Map.svg') }}">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 img2">
+                        <img src="{{ asset('img/icons/Icon_Shop.svg') }}">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 img3">
+                        <img src="{{ asset('img/icons/Icon_Offer.svg') }}">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 img4">
+                        <img src="{{ asset('img/icons/Icon_Concert.svg') }}">
+                    </div>
+                </div>
+            <div class="col-lg-3 col-sm-6 block1">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Partages ton bon plan "Salle de concert/Bar"</h3>
+                        <p>Si tu connais une super salle de concert ou un bar où on peut jouer, tu peux alors aider les autres artistes en donnant ton bon plan ici :
+                            <a href="{{ path('addLiveRoom') }}">
+                                <span class="addBtn btn_1">Ajouter Salle</span> </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-3 col-sm-6 block2">
-            <div class="thumbnail">
-                <img src="{{ asset('img/icons/Icon_Shop.svg') }}">
-                <div class="caption">
-
+            <div class="col-lg-3 col-sm-6 block2">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Partages ton bon plan "Magasin"</h3>
+                        <p>Si tu connais un super music shop où on peut trouver du super matos, tu peux alors aider les autres artistes en donnant ton bon plan ici :
+                            <a href="{{ path('addStore') }}">
+                                <span class="addBtn btn_2">Ajouter Magasin</span> </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-3 col-sm-6 block3">
-            <div class="thumbnail">
-                <img src="{{ asset('img/icons/Icon_Offer.svg') }}">
-                <div class="caption">
-
+            <div class="col-lg-3 col-sm-6 block3">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Passes ta petite annonce</h3>
+                        <p>Si tu as du matos qui ne te sers plus mais tu veux pas le laisser prendre la poussière, tu peux alors en faire profiter les autres artistes en postant ta petite annonce ici :
+                            <a href="{{ path('addOffer') }}">
+                                <span class="addBtn btn_3">Ajouter Petite Annonce</span> </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-3 col-sm-6 block4">
-            <div class="thumbnail">
-                <img src="{{ asset('img/icons/Icon_Social_Network.svg') }}">
-                <div class="caption">
-
+            <div class="col-lg-3 col-sm-6 block4">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Fais ta pub pour tes futurs concerts</h3>
+                        <p>Si tu veux faire ta publicité pour tes futurs concerts, alors tu peux le faire ici :
+                            <a href="{{ path('addConcert') }}">
+                                <span class="addBtn btn_4">Ajouter Concert</span> </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 {% endblock %}
