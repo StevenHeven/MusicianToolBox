@@ -27,14 +27,20 @@
 
         <div id="OfferHolder content">
             {% for offer in offers %}
-                {#{% for image in offer.image %}#}
-                {#{{ dump(image) }}#}
-                    {#<img src="{{ asset(image.webpath) }}">#}
-                    {#{% endfor %}#}
                 <div class="row offer">
                     <div class="col-lg-11 col-sm-11 oneOfferContainer">
                         <div class="col-lg-2 col-sm-3 col-xs-4 containerPictureOffer">
 
+                            {% for image in offer.image %}
+                                <div class="col-lg-4">
+                                    {% if image.url != "url"%}
+                                <img src="{{ asset(image.webpath) }}">
+                                    {% endif %}
+                                    {% if image.url == "url" %}
+                                        <img src="{{ asset('img/photos/photo-camera.svg') }}">
+                                     {% endif %}
+                                </div>
+                            {% endfor %}
                         </div>
                         <div class="col-lg-10 textOffer">
                             <div class="row">
