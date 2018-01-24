@@ -12,6 +12,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Image;
 use AppBundle\Entity\Offer;
 use AppBundle\Form\OfferType;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -72,6 +73,48 @@ class OfferController extends Controller
 
 
         return $this->render('@App/Offer/oneOffer.html.twig', ['offer_images' => $offer_images]);
+    }
+
+    /**
+     * @Route("/edit/{id}", name="editOffer")
+     */
+    //methode qui modifie une petite annonce
+    public function editAction($id, Request $request){
+
+        $offer= $this->getDoctrine()->getRepository(Offer::class)->findWithPictures($id);;
+
+        $form1= $this->createForm(OfferType::class, $offer);
+        $form1->handleRequest($request);
+
+        if ($form1->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($offer);
+            $em->flush();
+
+            return $this->redirectToRoute("indexOffer");
+        }
+
+        return $this->render('@App/Offer/editOffer.html.twig', ["form" => $form1->createView()]);
+    }
+
+    /**
+     * @Route("/delete/{id}", name="deleteOffer")
+     */
+    //methode qui supprime une petite annonce
+    public function deleteAction(Offer $offer, $id)
+    {
+        try{
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($offer);
+            $em->flush();
+        }
+
+        catch (Exception $e){
+            throw $this->createNotFoundException("L'annonce #".$id." n'existe pas ou a été déjà supprimé");
+        }
+
+
+        return $this->redirectToRoute("indexOffer");
     }
 
 }

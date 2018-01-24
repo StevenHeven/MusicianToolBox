@@ -269,7 +269,7 @@ body.index:before, body.index:after {
     color: white !important;
 }
 
-.blocks4 .thumbnail .caption h3, .lignAdd .thumbnail .caption h3 {
+.blocks4 .thumbnail .caption h3, .lignAdd .thumbnail .caption h3{
     font-family: "Germania One", cursive;
     text-align: center;
 }
@@ -872,7 +872,7 @@ ul.nav > li {
     Form All Page Styles
 -------------------------------------------------------*/
 
-.liveRoomFormContainer, .storeFormContainer, .offerFormContainer {
+.liveRoomFormContainer, .storeFormContainer, .offerFormContainer,  .editOfferContainer {
     background-color: rgba(0, 0, 0, 0.5);
     margin-top: 25px;
     margin-bottom: 25px;
@@ -1064,6 +1064,32 @@ ul.nav > li {
     width: 100%;
 }
 
+.btn_userActions{
+    margin-left: auto;
+    width: 38%;
+    padding-bottom: 3%;
+}
+
+/*-------------------------------------------------------
+	Edit Offer Styles
+-------------------------------------------------------*/
+
+.editOfferText{
+    font-family: "Germania One", cursive;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-top: 4%;
+}
+
+.editOfferContainer{
+  padding-top: 2%;
+}
+
+.editOfferContainer .btn-back{
+    width: 10%;
+    margin-left: 4%;
+}
 /*-------------------------------------------------------
 	Profile Styles
 -------------------------------------------------------*/

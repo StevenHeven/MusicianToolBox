@@ -39,7 +39,7 @@ class OfferAdminController extends Controller
 
     }
     /**
-     * @Route("/edit/{id}", name="editOffer")
+     * @Route("/edit/{id}", name="editAdminOffer")
      */
     //methode qui modifie une petite annonce
     public function editAction($id, Request $request){
@@ -62,7 +62,7 @@ class OfferAdminController extends Controller
     }
 
     /**
-     * @Route("/delete/{id}", name="deleteOffer")
+     * @Route("/delete/{id}", name="deleteAmdinOffer")
      * @param Offer $offer
      * @param $id
      * @return \Symfony\Component\HttpFoundation\RedirectResponse

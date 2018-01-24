@@ -76,8 +76,8 @@ class Offer
     private $instrument;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Image", mappedBy="offer", cascade={"persist"})
-     * @ORM\JoinColumn(onDelete="RESTRICT")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Image", mappedBy="offer", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(onDelete="REMOVE")
      */
     private $image;
 
@@ -212,7 +212,10 @@ class Offer
      */
     public function getCheckPro()
     {
-        return $this->checkPro;
+        if ($this->checkPro === 1){
+            return true;
+        }
+        return false;
     }
 
     /**

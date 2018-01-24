@@ -36,7 +36,7 @@
                                     {% if image.url != "url"%}
                                 <img src="{{ asset(image.webpath) }}">
                                     {% endif %}
-                                    {% if image.url == "url" %}
+                                    {% if image.url == "url" or image.url is null %}
                                         <img src="{{ asset('img/photos/photo-camera.svg') }}">
                                      {% endif %}
                                 </div>
@@ -48,7 +48,6 @@
                                 {% if offer.checkpro == 1 %}
                                     <span class="cantarell"> <a class="btn btn-xs btn-danger pro_btn"
                                                                 title="Je suis un professionnel">P</a></span>
-                                    </p>
                                 {% endif %}
                             </div>
                             <div class="row">
@@ -92,7 +91,7 @@
                 </div>
             {% endfor %}
         </div>
-        <div id="page-selection"></div>
+        <ul class="pagination"></ul>
     </div>
 
 {% endblock %}

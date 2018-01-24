@@ -124,6 +124,16 @@
             </div>
             {% endif %}
         </div>
+        {% if offer_images.user is not null %}
+            {% if app.user.id == offer_images.user.id %}
+                <div class="btn_userActions">
+                    <a href="{{ path('editOffer', {"id": offer_images.id}) }}" class="btn btn-primary btn-danger edit_Offer germania"><span
+                                class="glyphicon glyphicon-pencil"></span> Modifier l'annonce </a>
+                    <a href="{{ path('deleteOffer', {"id": offer_images.id}) }}" class="btn btn-primary btn-danger edit_Offer germania"><span
+                                class="glyphicon glyphicon-trash"></span> Suprimmer l'annonce </a>
+                </div>
+            {% endif %}
+        {% endif %}
     </div>
     </div>
 

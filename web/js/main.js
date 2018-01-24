@@ -4,6 +4,7 @@ $("a[href='#top']").click(function() {
     return false;
 });
 
+
 $(document).ready(function (){
     $('#table_admin').DataTable();
 });
